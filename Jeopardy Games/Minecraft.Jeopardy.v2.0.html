@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<head>
+<script>
+gPoints = new Array('NaN',0,0)        // Array that holds the amount of points collected by each player
+gQuestions = new Array() // Array with Question Data
+player = 1;
+
+gLetters = new Array('A','B','C','D')
+
+Question("Endermen","Cave Spider", "Silverfish","Skeleton","What type of mob teleports?","A",100);
+Question("Cow","Witch","Herobrine","Pufferfish","What mob has been taken in and out of the game?","C",200);
+Question("Creeper","Spider","Skeleton","Enderman","What mob could be called the 'Green Devil'?","A",300);
+Question("Cowboy","Spider Jockey", "Cavalry"," Super Skeleton","What is a skeleton riding a spider called?","B",400);
+Question("Cave","Anywhere in the dark","Stronghold","Mineshaft","Where is the only place cave spiders spawn naturally?","D",500);
+
+Question("Coal","Iron","Lapis Lazuli","Emerald","What ore doesn’t need a stone pick in PC?","A",100);
+Question("Stone axe"," Wooden sword","Wooden axe","Sharpness 5 Wooden axe","Which tool does the least amount of damage?","C",200);
+Question("Savannah","Forest","Extreme Hills","Ocean","What is the only biome where emeralds naturally generate?","C",300);
+Question("125","132", "405","374","How many blocks can an Stone pick mine out before breaking? (without unbreaking enchantments?)","B",400);
+Question("Fortune","Fame","Lure","Looting","What enchantment gives a better chance of rare drops on a sword?","D",500);
+
+Question("5","10","20","50","how many whole hearts do you have?","B",100);
+Question("Bob"," Steve","Frank","Joe","What is the character's default name?","A",200);
+Question("Leather","Diamond","Iron","Gold","What is the best non-enchanted armor?","B",300);
+Question("Square","Circle","Rectangle","Rhombus","What is steve’s favorite shape?","A",400);
+Question("One Meter","Three Feet","One Foot","Six Inches","How big is one block?","A",500);
+
+Question("Desert and Grassland","Jungle and Savannah"," Jungle and Desert","Grassland and Ocean","What are the only two biomes with temples?","C",100 );
+Question("Jungle","Desert","Grassland","Extreme hills"," Where do sandstone villages spawn?","B",200);
+Question("Grassland","Jungle","Desert","Forest","What biome has cocoa beans?","B",300);
+Question("Grassland","Forest","Snow","Desert","In what biome are villages made of wood?","A",400);
+Question("1","2","3","Infinite","How many strongholds would spawn in a world in pc?","C",500);
+
+Question("5","7","8","9","How many blocks of cobblestone do you need to make a furnace?","C",100);
+Question("Saddle","Item Frame"," Leather Cap","Book","What leather item can you not craft?","A",200);
+Question("9","18","27","36","How much iron is needed for an iron golem?","D",300);
+Question("31","24","56","32","How much iron is needed for an anvil?","A",400);
+Question("7","14","21","28","With 42 stone, how many stone stairs could I get?","D",500);
+
+
+function Question(ansA,ansB,ansC,ansD,strQuestion,ansCorrect,points) {
+
+  this.ansA = ansA
+  this.ansB = ansB
+  this.ansC = ansC
+  this.ansD = ansD
+  this.strQuestion = strQuestion
+  this.ansCorrect = ansCorrect 
+  this.points = points
+  dumpArray = new Array(ansA,ansB,ansC,ansD,strQuestion,ansCorrect,points)
+  gQuestions.push(dumpArray)
+}
+
+function Jeopardy(iCategory,iPointVal) {
+QuestionParsed = iCategory * 5 - 5 + (iPointVal)/100 - 1 //Gets the array number of reference
+document.getElementById("pts").innerHTML= gQuestions[QuestionParsed][6]
+document.getElementById("QuestionDat").innerHTML= gQuestions[QuestionParsed][4]
+
+document.getElementById("Cat" + iCategory + "Pt" + iPointVal).onclick=null
+document.getElementById("Cat" + iCategory + "Pt" + iPointVal).style.color="limegreen"
+document.getElementById("Cat" + iCategory + "Pt" + iPointVal).style.backgroundColor="black"
+
+document.getElementById("A").innerHTML = gQuestions[QuestionParsed][0]
+document.getElementById("B").innerHTML = gQuestions[QuestionParsed][1]
+document.getElementById("C").innerHTML = gQuestions[QuestionParsed][2]
+document.getElementById("D").innerHTML = gQuestions[QuestionParsed][3]
+
+var i = 0;
+while (i < gLetters.length){
+document.getElementById(gLetters[i]).onclick = function QuestionWrong() { 
+alert("You are incorrect");
+document.getElementById("A").onclick=null;
+document.getElementById("B").onclick=null;
+document.getElementById("C").onclick=null;
+document.getElementById("D").onclick =null;
+if(player == 1) {
+  player  = 2
+}
+else {
+  player = 1
+}
+alert("Player " + player + "'s Turn.")
+}
+i++
+}
+
+switch (gQuestions[QuestionParsed][5]){
+
+case "A": document.getElementById("A").onclick= function QuestionRight(){
+alert("Correct!");
+gPoints[player] = gPoints[player] + iPointVal;
+document.getElementById("P" + player + "Points").innerHTML = "Player " + player + ": " + gPoints[player];
+document.getElementById("A").onclick=null;
+document.getElementById("B").onclick=null;
+document.getElementById("C").onclick=null;
+document.getElementById("D").onclick =null;
+if(player == 1) {
+  player  = 2
+}
+else {
+  player = 1
+}
+alert("Player " + player + "'s Turn.")
+}
+
+case "B": document.getElementById("B").onclick=function QuestionRight(){
+alert("Correct!");
+gPoints[player] = gPoints[player] + iPointVal;
+document.getElementById("P" + player + "Points").innerHTML = "Player " + player + ": " + gPoints[player];
+document.getElementById("A").onclick=null;
+document.getElementById("B").onclick=null;
+document.getElementById("C").onclick=null;
+document.getElementById("D").onclick =null;
+if(player == 1) {
+  player  = 2
+}
+else {
+  player = 1
+}
+alert("Player " + player + "'s Turn.")
+}
+
+case "C": document.getElementById("C").onclick=function QuestionRight(){
+alert("Correct!");
+gPoints[player] = gPoints[player] + iPointVal;
+document.getElementById("P" + player + "Points").innerHTML = "Player " + player + ": " + gPoints[player];
+document.getElementById("A").onclick=null;
+document.getElementById("B").onclick=null;
+document.getElementById("C").onclick=null;
+document.getElementById("D").onclick =null;
+if(player == 1) {
+  player  = 2
+}
+else {
+  player = 1
+}
+alert("Player " + player + "'s Turn.")
+}
+
+case "D": document.getElementById("D").onclick= function QuestionRight(){
+alert("Correct!");
+gPoints[player] = gPoints[player] + iPointVal;
+document.getElementById("P" + player + "Points").innerHTML = "Player " + player + ": " + gPoints[player];
+document.getElementById("A").onclick=null;
+document.getElementById("B").onclick=null;
+document.getElementById("C").onclick=null;
+document.getElementById("D").onclick =null;
+if(player == 1) {
+  player  = 2
+}
+else {
+  player = 1
+}
+}
+}
+}
+
+</script>
+<style>
+body
+{
+background-color:orange;
+}
+h1
+{
+color:black;
+font-size:72px;
+text-align:center;
+}
+td{height:80px;width:150px;background-color:limegreen;color:Black;}
+</style>
+</head>
+<body>
+<h1>Welcome to Jeopardy</h1>
+<table align="center" BORDER="40" CELLPADDING="5">
+<tr>
+<th>Mobs</th>
+<th>Items and Tools</th>
+<th>Player</th>
+<th>Biomes</th>
+<th>Crafting</th>
+</tr>
+<tr>
+<td id="Cat1Pt100" onClick="Jeopardy(1,100)">100</td>
+<td id="Cat2Pt100" onClick="Jeopardy(2,100)">100</td>
+<td id="Cat3Pt100" onClick="Jeopardy(3,100)">100</td>
+<td id="Cat4Pt100" onClick="Jeopardy(4,100)">100</td>
+<td id="Cat5Pt100" onClick="Jeopardy(5,100)">100</td>
+</tr>
+<td id="Cat1Pt200" onClick="Jeopardy(1,200)">200</td>
+<td id="Cat2Pt200" onClick="Jeopardy(2,200)">200</td>
+<td id="Cat3Pt200" onClick="Jeopardy(3,200)">200</td>
+<td id="Cat4Pt200" onClick="Jeopardy(4,200)">200</td>
+<td id="Cat5Pt200" onClick="Jeopardy(5,200)">200</td>
+<tr>
+<td id="Cat1Pt300" onClick="Jeopardy(1,300)">300</td>
+<td id="Cat2Pt300" onClick="Jeopardy(2,300)">300</td>
+<td id="Cat3Pt300" onClick="Jeopardy(3,300)">300</td>
+<td id="Cat4Pt300" onClick="Jeopardy(4,300)">300</td>
+<td id="Cat5Pt300" onClick="Jeopardy(5,300)">300</td>
+</tr>
+<tr>
+<td id="Cat1Pt400" onClick="Jeopardy(1,400)">400</td>
+<td id="Cat2Pt400" onClick="Jeopardy(2,400)">400</td>
+<td id="Cat3Pt400" onClick="Jeopardy(3,400)">400</td>
+<td id="Cat4Pt400" onClick="Jeopardy(4,400)">400</td>
+<td id="Cat5Pt400" onClick="Jeopardy(5,400)">400</td>
+</tr>
+<tr>
+<td id="Cat1Pt500" onClick="Jeopardy(1,500)">500</td>
+<td id="Cat2Pt500" onClick="Jeopardy(2,500)">500</td>
+<td id="Cat3Pt500" onClick="Jeopardy(3,500)">500</td>
+<td id="Cat4Pt500" onClick="Jeopardy(4,500)">500</td>
+<td id="Cat5Pt500" onClick="Jeopardy(5,500)">500</td>
+</tr>
+</table>
+<p id="pts"></p>
+<br>
+<p id="QuestionDat"></p>
+<button id="A">A</button>
+<button id="B">B</button>
+<button id="C">C</button>
+<button id="D">D</button>
+<p>Points</p>
+<p id="P1Points">Player 1: 0</p>
+<p id="P2Points">Player 2: 0</p>
+</body>
+</html>

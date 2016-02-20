@@ -1,0 +1,1292 @@
+<HTML>
+<head>
+<style>
+th {font-size:40px;color:skyblue}
+td {font-size:40px;background-color:skyblue;color:midnightblue}
+body {background-color:midnightblue}
+p {font-size:30px;color:skyblue}
+button {background-color:skyblue;color:midnightblue;width:49%}
+</style>
+
+<script>
+
+ var v = 1
+ var w = 1
+ var x = 1
+ var y = 1
+ var z = 1
+ 
+function Jeopardy(row,cell) {
+// What column and how many points to give
+// Geography Questions
+
+if (cell == 1) { // COLUMN 1, DONE
+if (row == 1) { 	// Row 1 Column 1 
+document.getElementById("category").innerHTML="Geography 100 Points"
+ document.getElementById("1,1").onclick= null
+document.getElementById("question").innerHTML="Which of these countries has 2 capitals?"
+document.getElementById("1,1").style.color="gray"
+document.getElementById("1,1").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "The Ukraine";
+document.getElementById("btnB").innerHTML=" The Netherlands";
+document.getElementById("btnC").innerHTML=" Moldova";
+document.getElementById("btnD").innerHTML=" Croatia";
+
+// Button A Code
+ document.getElementById("btnA").onclick=function QWrong(){
+
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+   alert ("Sorry, that is incorrect.")}
+
+ //Button B code
+
+document.getElementById("btnB").onclick=function QRight(){
+v++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+ alert ("Correct!")}
+
+
+
+
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QWrong(){
+
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+   alert ("Sorry, that is incorrect.")}
+
+
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QWrong(){
+
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+  alert ("Sorry, that is incorrect.")
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null}
+
+}
+if (row == 2) { 	// Row 2, Column 1
+
+document.getElementById("category").innerHTML="Geography 200 Points"
+ document.getElementById("2,1").onclick= null
+document.getElementById("question").innerHTML="Which country is the seventh most populous city in the world?"
+document.getElementById("2,1").style.color="gray"
+document.getElementById("2,1").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "Beijing";
+document.getElementById("btnB").innerHTML=" New York";
+document.getElementById("btnC").innerHTML=" Greater Los Angeles";
+document.getElementById("btnD").innerHTML=" Mexico City";
+
+// Button A Code
+document.getElementById("btnA").onclick=function QRight(){
+w++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+  alert ("Correct!")}
+
+
+
+ //Button B code
+
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button C code
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ document.getElementById("2,1").onclick= null
+   alert ("Sorry, that is incorrect.")}
+
+
+
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+
+
+}
+ if (row == 3) { 	// Row 3, Column 1
+document.getElementById("category").innerHTML="Geography 300 Points"
+document.getElementById("3,1").onclick= null
+document.getElementById("question").innerHTML="Which hydro-electric dam is the biggest in the world by volume?"
+document.getElementById("3,1").style.color="gray"
+document.getElementById("3,1").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "Fort Peck Dam";
+document.getElementById("btnB").innerHTML=" Afsluitdijk Dam";
+document.getElementById("btnC").innerHTML=" Syncrude Tailings Dam";
+document.getElementById("btnD").innerHTML=" Tarbela Dam";
+
+// Button A Code
+
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")}
+
+
+ //Button B code
+
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")}
+
+
+
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QRight(){
+z++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnC").onclick= null
+  alert ("Correct!")}
+
+
+
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QWrong(){
+
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnC").onclick= null
+ alert ("Sorry, that is incorrect.")}
+}
+if (row == 4) { 	// Row 4, Column 1
+
+document.getElementById("category").innerHTML="Geography 400 Points"
+document.getElementById("4,1").onclick= null
+document.getElementById("question").innerHTML="What is the lowest point on dry land in feet?"
+document.getElementById("4,1").style.color="gray"
+document.getElementById("4,1").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "1312 feet below sea level"
+document.getElementById("btnB").innerHTML=" 244 feet below sea level"
+document.getElementById("btnC").innerHTML=" 537 feet below sea level"
+document.getElementById("btnD").innerHTML=" 2435 feet below sea level"
+// Button A Code
+
+document.getElementById("btnA").onclick=function QRight(){
+y++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+  alert ("Correct!")}
+
+
+
+ //Button B code
+
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+
+
+
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QWrong(){
+
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+
+
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QWrong(){
+
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+
+
+
+}
+ if (row == 5) { 	// Row 5,Column 1
+
+document.getElementById("category").innerHTML="Geography 500 Points"
+document.getElementById("5,1").onclick= null
+document.getElementById("question").innerHTML="What is the smallest country in the world?"
+document.getElementById("5,1").style.color="gray"
+document.getElementById("5,1").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "Malta";
+document.getElementById("btnB").innerHTML=" Moracco";
+document.getElementById("btnC").innerHTML=" Singapore";
+document.getElementById("btnD").innerHTML=" Vatican City";
+// Button A Code
+
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+
+
+
+ //Button B code
+
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+
+
+
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QWrong(){
+
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnD").onclick= null
+ alert ("Sorry, that is incorrect.")}
+
+
+
+ //Button D code
+
+document.getElementById("btnD").onclick=function QRight(){
+x++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnD").onclick= null
+  alert ("Correct!")
+ }
+
+}
+}
+else if (cell == 2) { // COLUMN 2
+if (row == 1) { 	// Row 1 Column 2
+document.getElementById("category").innerHTML="Math 100 Points"
+document.getElementById("question").innerHTML="Which is the first step in the order of operations?"
+ document.getElementById("1,2").onclick= null
+ document.getElementById("1,2").style.color="gray"
+document.getElementById("1,2").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "Adding and Subtracting"
+document.getElementById("btnB").innerHTML=" Exponents"
+document.getElementById("btnC").innerHTML=" Multiplying and Dividing"
+document.getElementById("btnD").innerHTML=" Parenthesis"
+
+// Button A Code
+
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button B code
+
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QRight(){
+v++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+  alert ("Correct!")}
+
+}
+if (row == 2) { 	// Row 2, Column 2
+document.getElementById("category").innerHTML="Math 200 Points"
+document.getElementById("question").innerHTML="What is the value of X in this equation: 15x + 23 = 68?"
+document.getElementById("2,2").onclick= null
+ document.getElementById("2,2").style.color="gray"
+document.getElementById("2,2").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "2"
+document.getElementById("btnB").innerHTML=" 3"
+document.getElementById("btnC").innerHTML=" 4"
+document.getElementById("btnD").innerHTML=" 5"
+
+// Button A Code
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ 
+ //Button B code
+ document.getElementById("btnB").onclick=function QRight(){
+w++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+  alert ("Correct!")}
+  
+ //Button C code
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button D code
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+}
+if (row == 3) { 	// Row 3, Column 2 
+
+document.getElementById("category").innerHTML="Math 300 Points"
+ document.getElementById("3,2").onclick= null
+document.getElementById("question").innerHTML="What property says that A=A?"
+ document.getElementById("3,2").style.color="gray"
+document.getElementById("3,2").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "Reflexive Property"
+document.getElementById("btnB").innerHTML=" Symmetric Property"
+document.getElementById("btnC").innerHTML=" Equality Property"
+document.getElementById("btnD").innerHTML=" Transitive Property"
+
+// Button A Code
+document.getElementById("btnA").onclick=function QRight(){
+z++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+  alert ("Correct!")}
+ //Button B code
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+}
+if (row == 4) { 	// Row 4, Column 2
+
+document.getElementById("category").innerHTML="Math 400 Points"
+ document.getElementById("4,2").onclick= null
+document.getElementById("question").innerHTML="What equation represents Slope-Intercept Form?"
+ document.getElementById("4,2").style.color="gray"
+document.getElementById("4,2").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= " y=x"
+document.getElementById("btnB").innerHTML=" y= 2x + y"
+document.getElementById("btnC").innerHTML=" Ax+Bx+C=0"
+document.getElementById("btnD").innerHTML=" y= Mx+B"
+
+// Button A Code
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button B code
+
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+
+
+
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+
+
+
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QRight(){
+y++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+  alert ("Correct!")}
+
+
+
+}
+if (row == 5) { 	// Row 5,Column 2
+document.getElementById("category").innerHTML="Math 500 Points"
+document.getElementById("5,2").onclick= null
+document.getElementById("question").innerHTML="What is 255 base 2?"
+ document.getElementById("5,2").style.color="gray"
+document.getElementById("5,2").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML=" 11111111"
+document.getElementById("btnB").innerHTML=" 22222222"
+document.getElementById("btnC").innerHTML=" 01000001"
+document.getElementById("btnD").innerHTML=" 127"
+
+// Button A Code
+document.getElementById("btnA").onclick=function QRight(){
+x++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+  alert ("Correct!")
+}
+ //Button B code
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button C code
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button D code
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+}
+}
+else if (cell == 3) { // COLUMN 3
+if (row == 1) { 	// Row 1 Column 3
+document.getElementById("category").innerHTML="Trivia 100 Points"
+document.getElementById("question").innerHTML="How many Friday the 13th movies were made?"
+ document.getElementById("1,3").onclick= null
+ document.getElementById("1,3").style.color="gray"
+document.getElementById("1,3").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "13"
+document.getElementById("btnB").innerHTML=" 10"
+document.getElementById("btnC").innerHTML=" 12"
+document.getElementById("btnD").innerHTML=" 8"
+// Button A Code
+
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button B code
+
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QRight(){
+v++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnC").onclick= null
+  alert ("Correct!")}
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnC").onclick= null
+ alert ("Sorry, that is incorrect.")}
+
+}
+if (row == 2) { 	// Row 2, Column 3
+document.getElementById("category").innerHTML="Trivia 200 Points"
+document.getElementById("question").innerHTML="Christopher Columbus sailed for Spain but wans't actually born there. What country was he born in?"
+document.getElementById("2,3").onclick= null
+ document.getElementById("2,3").style.color="gray"
+document.getElementById("2,3").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "Greece"
+document.getElementById("btnB").innerHTML=" Italy"
+document.getElementById("btnC").innerHTML=" Portugal"
+document.getElementById("btnD").innerHTML=" France"
+
+// Button A Code
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button B code
+ document.getElementById("btnB").onclick=function QRight(){
+w++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+  alert ("Correct!")}
+ //Button C code
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button D code
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+ alert ("Sorry, that is incorrect.")}
+}
+if (row == 3) { 	// Row 3, Column 3
+
+document.getElementById("category").innerHTML="Trivia 300 Points"
+ document.getElementById("3,3").onclick= null
+document.getElementById("question").innerHTML="Which of these lists has all legit computer languages?"
+ document.getElementById("3,3").style.color="gray"
+document.getElementById("3,3").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "Ruby, Perl, HML, Python"
+document.getElementById("btnB").innerHTML=" Fortran 77, PHP, MYSQL, Assembly Code"
+document.getElementById("btnC").innerHTML=" Visual Basic, HTML, CSP, Ruby"
+document.getElementById("btnD").innerHTML=" Fortran 96, HTML, CSS, Assembly Code"
+
+// Button A Code
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button B code
+ document.getElementById("btnB").onclick=function QRight(){
+z++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+  alert ("Correct!")}
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+ alert ("Sorry, that is incorrect.")}
+}
+if (row == 4) { 	// Row 4, Column 3
+
+document.getElementById("category").innerHTML="Trivia 400 Points"
+ document.getElementById("4,3").onclick= null
+document.getElementById("question").innerHTML="What was the first creature ever ejected from a supersonic aircraft?"
+ document.getElementById("4,3").style.color="gray"
+document.getElementById("4,3").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= " A human"
+document.getElementById("btnB").innerHTML="  A chimpanzee"
+document.getElementById("btnC").innerHTML=" A bear"
+document.getElementById("btnD").innerHTML=" A dog"
+
+// Button A Code
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button B code
+
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+
+
+
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QRight(){
+y++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnC").onclick= null
+  alert ("Correct!")}
+
+
+
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnC").onclick= null
+ alert ("Sorry, that is incorrect.")}
+
+
+
+}
+if (row == 5) { 	// Row 5,Column 3
+document.getElementById("category").innerHTML="Trivia 500 Points"
+document.getElementById("5,3").onclick= null
+document.getElementById("question").innerHTML="Who made the first modern pencil?"
+ document.getElementById("5,3").style.color="gray"
+document.getElementById("5,3").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= " Buster Keaton"
+document.getElementById("btnB").innerHTML="  Harry Lipman"
+document.getElementById("btnC").innerHTML=" Ralph Edwards"
+document.getElementById("btnD").innerHTML=" Lizzie Borden"
+// Button A Code
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ 
+ //Button B code
+ document.getElementById("btnB").onclick=function QRight(){
+x++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+  alert ("Correct!")
+}
+ //Button C code
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ 
+ //Button D code
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+
+}
+}
+else if (cell == 4) { // COLUMN 4
+if (row == 1) { 	// Row 1 Column 4
+document.getElementById("category").innerHTML="History 100 Points"
+document.getElementById("question").innerHTML="Who was the first person to circumnavigate the world?"
+ document.getElementById("1,4").onclick= null
+ document.getElementById("1,4").style.color="gray"
+document.getElementById("1,4").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "Simon Stevin"
+document.getElementById("btnB").innerHTML=" Ferdinand Magellan"
+document.getElementById("btnC").innerHTML=" Vasco Da Gama"
+document.getElementById("btnD").innerHTML=" Hernan Cortes"
+// Button A Code
+
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button B code
+
+ document.getElementById("btnB").onclick=function QRight(){
+v++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+  alert ("Correct!")}
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+ alert ("Sorry, that is incorrect.")}
+
+}
+if (row == 2) { 	// Row 2, Column 4
+document.getElementById("category").innerHTML="History 200 Points"
+document.getElementById("question").innerHTML="Who was the first person to reach the south pole?"
+document.getElementById("2,4").onclick= null
+ document.getElementById("2,4").style.color="gray"
+document.getElementById("2,4").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "Børge Ousland"
+document.getElementById("btnB").innerHTML=" Erling Kagge"
+document.getElementById("btnC").innerHTML=" Roald Amundsen"
+document.getElementById("btnD").innerHTML=" Robert Scott"
+// Button A Code
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button B code
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button C code
+ document.getElementById("btnC").onclick=function QRight(){
+w++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnC").onclick= null
+  alert ("Correct!")}
+ //Button D code
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnC").onclick= null
+ alert ("Sorry, that is incorrect.")}
+}
+if (row == 3) { 	// Row 3, Column 4
+
+document.getElementById("category").innerHTML="History 300 Points"
+ document.getElementById("3,4").onclick= null
+document.getElementById("question").innerHTML="What country built the Porcelain Tower?"
+ document.getElementById("3,4").style.color="gray"
+document.getElementById("3,4").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "China"
+document.getElementById("btnB").innerHTML=" Japan"
+document.getElementById("btnC").innerHTML=" Italy"
+document.getElementById("btnD").innerHTML=" Mexico"
+
+// Button A Code
+document.getElementById("btnA").onclick=function QRight(){
+z++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+  alert ("Correct!")}
+ //Button B code
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+}
+if (row == 4) { 	// Row 4, Column 4
+
+document.getElementById("category").innerHTML="History 400 Points"
+ document.getElementById("4,4").onclick= null
+document.getElementById("question").innerHTML="Which king was beheaded in the French Revolution?"
+ document.getElementById("4,4").style.color="gray"
+document.getElementById("4,4").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "Napoleon Bonaparte"
+document.getElementById("btnB").innerHTML=" Henry III"
+document.getElementById("btnC").innerHTML=" King George III"
+document.getElementById("btnD").innerHTML=" Louis XVI"
+
+// Button A Code
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button B code
+
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+
+
+
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnD").onclick= null
+ alert ("Sorry, that is incorrect.")}
+
+
+
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QRight(){
+y++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnD").onclick= null
+  alert ("Correct!")}
+
+
+
+}
+if (row == 5) { 	// Row 5,Column 4
+document.getElementById("category").innerHTML="History 500 Points"
+document.getElementById("5,4").onclick= null
+document.getElementById("question").innerHTML="What is  Major General William L. Jackson's nickname?"
+ document.getElementById("5,4").style.color="gray"
+document.getElementById("5,4").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= " Mudwall"
+document.getElementById("btnB").innerHTML=" Little Billy"
+document.getElementById("btnC").innerHTML=" Stonewall"
+document.getElementById("btnD").innerHTML=" Wizard of the Saddle"
+
+// Button A Code
+document.getElementById("btnA").onclick=function QRight(){
+x++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+  alert ("Correct!")
+}
+ //Button B code
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button C code
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button D code
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+}
+}
+else { // COLUMN 5
+if (row == 1) { 	// Row 1 Column 5
+document.getElementById("category").innerHTML="Biology 100 Points"
+document.getElementById("question").innerHTML="What did Robert Hooke first look at with a microscope?"
+ document.getElementById("1,5").onclick= null
+ document.getElementById("1,5").style.color="gray"
+document.getElementById("1,5").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML= "Cells in saliva "
+document.getElementById("btnB").innerHTML=" Cells in cheese"
+document.getElementById("btnC").innerHTML=" Cells in a piece of Cork"
+document.getElementById("btnD").innerHTML=" Cells in water"
+// Button A Code
+
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button B code
+
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QRight(){
+v++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnC").onclick= null
+  alert ("Correct!")}
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnC").onclick= null
+ alert ("Sorry, that is incorrect.")}
+
+}
+if (row == 2) { 	// Row 2, Column 5
+document.getElementById("category").innerHTML="Biology 200 Points"
+document.getElementById("question").innerHTML="What is an example of a sarcodine?"
+document.getElementById("2,5").onclick= null
+ document.getElementById("2,5").style.color="gray"
+document.getElementById("2,5").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML=" Ameboa "
+document.getElementById("btnB").innerHTML=" Zebra"
+document.getElementById("btnC").innerHTML=" Rainbow Trout"
+document.getElementById("btnD").innerHTML=" Stromatolite"
+// Button A Code
+document.getElementById("btnA").onclick=function QRight(){
+w++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+  alert ("Correct!")}
+ //Button B code
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button C code
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button D code
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+}
+if (row == 3) { 	// Row 3, Column 5
+
+document.getElementById("category").innerHTML="Biology 300 Points"
+ document.getElementById("3,5").onclick= null
+document.getElementById("question").innerHTML="What is a virus that infects bacteria?"
+ document.getElementById("3,5").style.color="gray"
+document.getElementById("3,5").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML=" Arbovirus "
+document.getElementById("btnB").innerHTML=" Helical virus"
+document.getElementById("btnC").innerHTML=" Icosahedral"
+document.getElementById("btnD").innerHTML=" Bacteriophage"
+
+// Button A Code
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+  }
+ //Button B code
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnD").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QRight(){
+z++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnD").onclick= null
+  alert ("Correct!")}
+}
+if (row == 4) { 	// Row 4, Column 5
+
+document.getElementById("category").innerHTML="Biology 400 Points"
+ document.getElementById("4,5").onclick= null
+document.getElementById("question").innerHTML="What is the third level of classification with domain being the first?"
+ document.getElementById("4,5").style.color="gray"
+document.getElementById("4,5").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML="  Kingdom"
+document.getElementById("btnB").innerHTML=" Phylum"
+document.getElementById("btnC").innerHTML=" Class"
+document.getElementById("btnD").innerHTML=" Order"
+
+// Button A Code
+document.getElementById("btnA").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button B code
+
+ document.getElementById("btnB").onclick=function QRight(){
+y++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+  alert ("Correct!")}
+
+
+
+ //Button C code
+
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+ alert ("Sorry, that is incorrect.")}
+
+
+
+ //Button D code
+
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnB").onclick= null
+ alert ("Sorry, that is incorrect.")}
+
+
+
+}
+if (row == 5) { 	// Row 5,Column 5
+document.getElementById("category").innerHTML="Biology 500 Points"
+document.getElementById("5,5").onclick= null
+document.getElementById("question").innerHTML="The cells of fungi are arranged in branching threadlike tubes called?"
+ document.getElementById("5,5").style.color="gray"
+document.getElementById("5,5").style.backgroundColor="midnightblue"
+
+document.getElementById("btnA").innerHTML="  Hyphae"
+document.getElementById("btnB").innerHTML=" Diplococcus"
+document.getElementById("btnC").innerHTML=" Tetrad"
+document.getElementById("btnD").innerHTML=" Staphylococcus"
+
+// Button A Code
+document.getElementById("btnA").onclick=function QRight(){
+x++;
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+  alert ("Correct!")
+}
+ //Button B code
+ document.getElementById("btnB").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score;
+  document.getElementById("btnA").onclick= null
+  document.getElementById("btnC").onclick= null
+  document.getElementById("btnD").onclick= null
+  alert ("Sorry, that is incorrect.")
+ }
+ //Button C code
+ document.getElementById("btnC").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+ //Button D code
+ document.getElementById("btnD").onclick=function QWrong(){
+var score = x * 500 + y * 400 + z * 300 + w * 200 + v * 100 - 1500;
+ document.getElementById("answer").innerHTML= score
+ document.getElementById("btnA").onclick= null
+ alert ("Sorry, that is incorrect.")}
+}
+}
+}
+</script>
+
+</head>
+
+<title>Jeopardy</title>
+
+
+<body>
+
+<table border="1" width="100%">
+
+<tr>
+<th>Geography</th>
+<th>Math</th>
+<th>Trivia</th>
+<th>History</th>
+<th>Biology</th>
+</tr>
+<tr>
+<td id="1,1" onclick="Jeopardy(1,1);">100</td>
+<td id="1,2"onclick="Jeopardy(1,2)">100</td>
+<td id="1,3" onclick="Jeopardy(1,3)">100</td>
+<td id="1,4" onclick="Jeopardy(1,4)">100</td>
+<td id="1,5" onclick="Jeopardy(1,5)">100</td>
+</tr>
+<tr>
+<td id="2,1" onclick="Jeopardy(2,1)">200</td>
+<td id="2,2" onclick="Jeopardy(2,2)">200</td>
+<td id="2,3" onclick="Jeopardy(2,3)">200</td>
+<td id="2,4" onclick="Jeopardy(2,4)">200</td>
+<td id="2,5" onclick="Jeopardy(2,5)">200</td>
+</tr >
+<tr>
+<td id="3,1" onclick="Jeopardy(3,1)">300</td>
+<td id="3,2" onclick="Jeopardy(3,2)">300</td>
+<td id="3,3" onclick="Jeopardy(3,3)">300</td>
+<td id="3,4" onclick="Jeopardy(3,4)">300</td>
+<td id="3,5" onclick="Jeopardy(3,5)">300</td>
+</tr >
+<tr>
+<td id="4,1" onclick="Jeopardy(4,1)">400</td>
+<td id="4,2" onclick="Jeopardy(4,2)">400</td>
+<td id="4,3" onclick="Jeopardy(4,3)">400</td>
+<td id="4,4" onclick="Jeopardy(4,4)">400</td>
+<td id="4,5" onclick="Jeopardy(4,5)">400</td>
+</tr>
+<tr>
+<td id="5,1" onclick="Jeopardy(5,1)">500</td>
+<td id="5,2" onclick="Jeopardy(5,2)">500</td>
+<td id="5,3" onclick="Jeopardy(5,3)">500</td>
+<td id="5,4" onclick="Jeopardy(5,4)">500</td>
+<td id="5,5" onclick="Jeopardy(5,5)">500</td>
+</tr >
+</table>
+
+<p id="category"> Category</p>
+<p id="question"> Question</p>
+<!-- Buttons for Answers -->
+<button id="btnA" width="500">A</button>
+<button id="btnB" width="500">B</button>
+<br>
+<button id="btnC">C</button>
+<button id="btnD">D</button>
+<p> Player 1 Points:</p>
+<p id="answer"></p>

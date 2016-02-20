@@ -1,0 +1,201 @@
+
+<html>
+<head>
+<title>Hunter's Website| Home Page</title>
+<LINK REL="SHORTCUT ICON" HREF="/favicon.ico"> 
+<link rel="stylesheet" type="text/css" href="CSS/main/css-0003.css" id="link"/>
+<style>
+</style>
+<script id="greeting">
+ function Wait(bgcolor,type) {
+ if (type == 'bg')
+ {
+ setCookie("backgroundcolor",bgcolor,365);
+ }
+ else if(type =="defacto")
+ {
+ setCookie("backgroundcolor",'0',365)
+ setCookie("textcolor",'0',365)
+ }
+ else
+ {
+ setCookie("textcolor",bgcolor,365);
+ }
+ }
+ function ColorChange() {
+ var CookieColor=getCookie("backgroundcolor");
+ var CookieText=getCookie("textcolor")
+ if (CookieColor!=null && CookieColor!="")
+   {
+   if (CookieColor==0 && CookieText==0)
+   {
+   today = new Date();
+day = today.getDay();
+if (day == 0){document.getElementById("link").href="CSS/main/CSS-0003.1.css";}
+if (day == 1){document.getElementById("link").href="CSS/main/CSS-0003.2.css";}
+if (day == 2){document.getElementById("link").href="CSS/main/CSS-0003.3.css";}
+if (day == 3){document.getElementById("link").href="CSS/main/CSS-0003.4.css";}
+if (day == 4){document.getElementById("link").href="CSS/main/CSS-0003.5.css";}
+if (day == 5){document.getElementById("link").href="CSS/main/CSS-0003.6.css";}
+if (day == 6){document.getElementById("link").href="CSS/main/CSS-0003.css";}
+   }
+   else {
+   document.body.style.backgroundColor=CookieColor;
+   document.getElementById("intro").style.color=CookieText;
+   }
+  }
+  }
+   function getCookie(c_name) {
+var c_value = document.cookie;
+var c_start = c_value.indexOf(" " + c_name + "=");
+if (c_start == -1)
+{
+ c_start = c_value.indexOf(c_name + "=");
+}
+if (c_start == -1)
+{
+ c_value = null;
+}
+else
+{
+c_start = c_value.indexOf("=", c_start) + 1;
+var c_end = c_value.indexOf(";", c_start);
+if (c_end == -1)
+{
+ c_end = c_value.length;
+}
+c_value = unescape(c_value.substring(c_start,c_end));
+}
+return c_value;
+}
+ function setCookie(c_name,value,exdays) {
+ var exdate=new Date();
+ exdate.setDate(exdate.getDate() + exdays);
+ var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+ document.cookie=c_name + "=" + c_value;
+ }
+ function usernameWelcome() {
+ var username=getCookie("username");
+ if (username!=null && username!="")
+   {
+   alert("Welcome again " + username + "!!! The dark side has cookies!!!");
+   }
+ else 
+   {
+   username=prompt("Please enter your name:","");
+   if (username!=null && username!="")
+     {
+     setCookie("username",username,365);
+     }
+   }
+ }
+ </script>
+<script id="Top Picture Change">
+function picturenorm() {
+today = new Date();
+day = today.getDay();
+arday = new Array("Images/JPEG/HomePage/Menu/menu.1.jpg", "Images/JPEG/HomePage/Menu/menu.2.jpg", "Images/JPEG/HomePage/Menu/menu.3.jpg", 
+"Images/JPEG/HomePage/Menu/menu.4.jpg", "Images/JPEG/HomePage/Menu/menu.5.jpg", "Images/JPEG/HomePage/Menu/menu.6.jpg", "Images/JPEG/HomePage/Menu/menu.jpg");
+document.getElementById("menu").src=arday[day];
+}
+function picturechange() {
+today = new Date();
+day = today.getDay();
+arday = new Array("Images/JPEG/HomePage/Menu/menu.1INV.jpg", "Images/JPEG/HomePage/Menu/menu.2INV.jpg", "Images/JPEG/HomePage/Menu/menu.3INV.jpg", 
+"Images/JPEG/HomePage/Menu/menu.4INV.jpg", "Images/JPEG/HomePage/Menu/menu.5INV.jpg", "Images/JPEG/HomePage/Menu/menu.6INV.jpg", "Images/JPEG/HomePage/Menu/menuINV.jpg");
+document.getElementById("menu").src=arday[day];
+}
+</script>
+<script id="stylebackgroundandtext">
+function colortext(text){
+document.getElementById("intro").style.color=text;
+}
+function colorbg(bgc){
+document.body.style.backgroundColor=bgc;
+}
+</script>
+<script id="Millisecond End of School">
+var Timer=setInterval(function(){myTimer()},1);
+function myTimer()
+{
+today=new Date()
+var endSchool=new Date(today.getFullYear() +1, 5, 6,12,0,0,0)
+document.getElementById("daysleft").innerHTML=(endSchool.getTime()-today.getTime())+ " milliseconds until school is over!"
+}
+ </script>
+ <script id="Start Picture Setting">
+ function picstart(){
+    today = new Date();
+day = today.getDay();
+arday = new Array("Images/JPEG/HomePage/Menu/menu.1.jpg", "Images/JPEG/HomePage/Menu/menu.2.jpg", "Images/JPEG/HomePage/Menu/menu.3.jpg", 
+"Images/JPEG/HomePage/Menu/menu.4.jpg", "Images/JPEG/HomePage/Menu/menu.5.jpg", "Images/JPEG/HomePage/Menu/menu.6.jpg", "Images/JPEG/HomePage/Menu/menu.jpg");
+document.getElementById("menu").src=arday[day];
+}
+</script>
+</head>
+<body onload="ColorChange();picstart();usernameWelcome()" onload="user" id="body">
+<!-- class="main" -->
+<img src="Images/JPEG/HomePage/Menu/menu.jpg" width="100%" height="250" onclick="picturechange()" id="menu" onmouseup="picturenorm()">
+<!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+<iframe src="menu.html" width="100%" height="60" align="top" frameborder="0"></iframe>
+<p id="intro">
+Elliott and I learned to program from <a href="http://www.w3schools.com">W3 Schools</a>. This website gives tutorials on most (or maybe all) of the web languages today. Some examples are 
+XML, HTML and CSS. Most computer programming languages can be edited with <b><u>notepad</u></b>!!!! It is on all PCs. For this website I used HTML (Hyper-Text-Markup-Language), 
+Javascript, and CSS (Cascading style sheets) to make this website along with Elliott. We have also programmed <a href="http://www.canegang.org">Cane Gang's website</a>. 
+Programming in these languages are fun and easy to figure out. You can right click and go to find source to see what the code looks like.Some of the features of this website are: The Hunter's Website picture can invert its color 
+(which means it will go from a blue background to an orange background and orange text to blue text.).Left click to invert. Right click to bring it back to its original hue; and the JavaScript Styler.The best way to use the 
+JavaScript powered styler is to use one of the top rows of colors for text or background then one of the bottom rows.</p>
+<h3>JavaScript powered styler! This area is for text changing.</h3>
+<table id="textchange">
+<button style="background-color:cyan" onclick="colortext('cyan');Wait('cyan','txt')"></button>
+<button style="background-color:lime" onclick="colortext('lime');Wait('lime','txt')"></button>
+<button style="background-color:red" onclick="colortext('red');Wait('red','txt')"></button>
+<button style="background-color:yellow" onclick="colortext('yellow');Wait('yellow','txt')"></button>
+<button style="background-color:orange" onclick="colortext('orange');Wait('orange','txt')"></button>
+<button style="background-color:magenta" onclick="colortext('magenta');Wait('magenta','txt')"></button>
+<br>
+<button style="background-color:brown" onclick="colortext('brown');Wait('brown','txt')"></button>
+<button style="background-color:forestgreen" onclick="colortext('forestgreen');Wait('forestgreen','txt')"></button>
+<button style="background-color:maroon" onclick="colortext('maroon');Wait('maroon','txt')"></button>
+<button style="background-color:midnightblue" onclick="colortext('midnightblue');Wait('midnightblue','txt')"></button>
+<button style="background-color:black" onclick="colortext('black');Wait('black','txt')"></button>
+<button style="background-color:purple" onclick="colortext('violet');Wait('violet','txt')"></button>
+</tr>
+</table>
+<h3>JavaScript powered styler! This area is for background color changing.</h3>
+<table id="backgroundchange">
+<button style="background-color:cyan;color:black" onclick="colorbg('cyan');Wait('cyan','bg')"></button>
+<button style="background-color:lime;color:black" onclick="colorbg('lime');Wait('lime','bg')"></button>
+<button style="background-color:red;color:black" onclick="colorbg('red');Wait('red','bg')"></button>
+<button style="background-color:yellow;color:black" onclick="colorbg('yellow');Wait('yellow','bg')"></button>
+<button style="background-color:orange;color:black" onclick="colorbg('orange');Wait('orange','bg')"></button>
+<button style="background-color:magenta;color:black" onclick="colorbg('magenta');Wait('magenta','bg')"></button>
+<br>
+<br>
+<button style="background-color:brown;color:white" onclick="colorbg('brown');Wait('brown','bg')"></button>
+<button style="background-color:forestgreen;color:white" onclick="colorbg('forestgreen');Wait('forestgreen','bg')"></button>
+<button style="background-color:maroon;color:white" onclick="colorbg('maroon');Wait('maroon','bg')"></button>
+<button style="background-color:midnightblue;color:white" onclick="colorbg('midnightblue');Wait('midnightblue','bg')"></button>
+<button style="background-color:black;color:white" onclick="colorbg('black');Wait('black','bg')"></button>
+<button style="background-color:purple;color:white" onclick="colorbg('purple');Wait('purple','bg')"></button>
+</tr>
+</table>
+<button style="background-color:blue;color:white" onclick="Wait('black','defacto');history.go(0)">Go Back to Default</button>
+<br>
+<a href="https://docs.google.com/a/cra-school.org/forms/d/16CICIkLUXD93LMe_JE6iGgf9QX0IlvgxT8XjxUN5OpA/viewform">What did you think of the website?</a>
+<div style="color:goldenrod" id="datewrite">
+<script>
+var myVar=setInterval(function(){date()},1000);
+
+function date()
+{
+var d=new Date();
+var t=d.toLocaleTimeString();
+document.getElementById("timer").innerHTML=t;
+ }
+</script>
+<p id="timer"></p>
+<p id="daysleft"></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+ body {background-color:white}
+a
+{
+border-style:solid;
+border-color:darkmagenta;
+}
+a:link,a:visited
+{display:block;
+font-weight:bold;
+color:darkmagenta;
+background-color:white;
+width:120px;
+text-align:center;
+padding:4px;
+text-decoration:none;}
+a:hover,a:active
+{background-color:#darkmagenta;
+color:white;
+text-decoration:underline;}
+}

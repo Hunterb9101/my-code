@@ -1,0 +1,20 @@
+ body {background-color:black}
+a
+{
+border-style:solid;
+border-color:orange;
+}
+a:link,a:visited
+{display:block;
+font-weight:bold;
+color:black;
+background-color:orange;
+width:120px;
+text-align:center;
+padding:4px;
+text-decoration:none;}
+a:hover,a:active
+{background-color:black;
+color:orange;
+text-decoration:underline;}
+}

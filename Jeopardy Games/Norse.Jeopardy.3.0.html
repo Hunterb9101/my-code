@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+<style>
+	body {background-color:orange;}
+	h1 {color:black;font-size:36px;text-align:center;}
+	td{height:80px;width:80px;background-color:limegreen;color:Black;font-size:36px}
+	#Stats {position: fixed;top: 0px;right:0px;width:303px;}
+	.tdPressed {color:limegreen;background-color:black}
+</style>
+<script>
+gPoints = new Array('NaN',0,0)        // Array that holds the amount of points collected by each gCurrPlayer
+gQuestions = new Array()              // Array with Question Data
+gCurrPlayer = 1;                      // Current Player
+gLetters = new Array('A','B','C','D') // Used for while loops
+
+function updatePlayerPoints(){
+	gPoints[gCurrPlayer] = gPoints[gCurrPlayer] + gQuestions[QuestionParsed][6]
+	document.getElementById("P" + gCurrPlayer + "Points").innerHTML = "Player " + gCurrPlayer + " has " + gPoints[gCurrPlayer] + " points";
+}
+
+function nextTurn(displayIncorrect,addpoints){
+	if(typeof(displayIncorrect)==='undefined') displayIncorrect = false // This sets variables to default values if they aren't defined
+	if(typeof(addpoints)==='undefined') addpoints = true;               // 
+	
+	if (addpoints){updatePlayerPoints();} // Adds points to player score if this is true
+	if (displayIncorrect){alert("You are incorrect");} else{alert("You are correct!");} // if and else statement that displays correct/incorrect message
+	
+	for(cntr = 0; cntr < gLetters.length; cntr++) {               // Nullifies all answer buttons
+		document.getElementById(gLetters[cntr]).onclick = null;
+	}
+	
+	if(gCurrPlayer == 1){gCurrPlayer++;} 
+	else{gCurrPlayer = 1;}
+	alert("Player " + gCurrPlayer + "'s Turn.")
+	document.getElementById("CurrPlayer").innerHTML = "It is currently Player " + gCurrPlayer + "'s turn"
+}
+
+gQuestions.push(("Endermen","Cave Spider", "Silverfish","Skeleton","What type of mob teleports?","A",100));
+gQuestions.push(("Cow","Witch","Herobrine","Pufferfish","What mob has been taken in and out of the game?","C",200));
+gQuestions.push(("Creeper","Spider","Skeleton","Enderman","What mob could be called the 'Green Devil'?","A",300));
+gQuestions.push(("Cowboy","Spider Jockey", "Cavalry"," Super Skeleton","What is a skeleton riding a spider called?","B",400));
+gQuestions.push(("Cave","Anywhere in the dark","Stronghold","Mineshaft","Where is the only place cave spiders spawn naturally?","D",500));
+
+gQuestions.push(new Array("Coal","Iron","Lapis Lazuli","Emerald","What ore doesn’t need a stone pick in PC?","A",100));
+gQuestions.push(new Array("Stone axe"," Wooden sword","Wooden axe","Sharpness 5 Wooden axe","Which tool does the least amount of damage?","C",200));
+gQuestions.push(new Array("Savannah","Forest","Extreme Hills","Ocean","What is the only biome where emeralds naturally generate?","C",300));
+gQuestions.push(new Array("125","132", "405","374","How many blocks can an Stone pick mine out before breaking? (without unbreaking enchantments?)","B",400));
+gQuestions.push(new Array("Fortune","Fame","Lure","Looting","What enchantment gives a better chance of rare drops on a sword?","D",500));
+
+gQuestions.push(new Array("5","10","20","50","how many whole hearts do you have?","B",100));
+gQuestions.push(new Array("Bob"," Steve","Frank","Joe","What is the character's default name?","A",200));
+gQuestions.push(new Array("Leather","Diamond","Iron","Gold","What is the best non-enchanted armor?","B",300));
+gQuestions.push(new Array("Square","Circle","Rectangle","Rhombus","What is steve’s favorite shape?","A",400));
+gQuestions.push(new Array("One Meter","Three Feet","One Foot","Six Inches","How big is one block?","A",500));
+
+gQuestions.push(new Array("Desert and Grassland","Jungle and Savannah"," Jungle and Desert","Grassland and Ocean","What are the only two biomes with temples?","C",100));
+gQuestions.push(new Array("Jungle","Desert","Grassland","Extreme hills"," Where do sandstone villages spawn?","B",200));
+gQuestions.push(new Array("Grassland","Jungle","Desert","Forest","What biome has cocoa beans?","B",300));
+gQuestions.push(new Array("Grassland","Forest","Snow","Desert","In what biome are villages made of wood?","A",400));
+gQuestions.push(new Array("1","2","3","Infinite","How many strongholds would spawn in a world in pc?","C",500));
+
+gQuestions.push(new Array("5","7","8","9","How many blocks of cobblestone do you need to make a furnace?","C",100));
+gQuestions.push(new Array("Saddle","Item Frame"," Leather Cap","Book","What leather item can you not craft?","A",200));
+gQuestions.push(new Array("9","18","27","36","How much iron is needed for an iron golem?","D",300));
+gQuestions.push(new Array("31","24","56","32","How much iron is needed for an anvil?","A",400));
+gQuestions.push(new Array("7","14","21","28","With 42 stone, how many stone stairs could I get?","D",500));
+
+function Jeopardy(iCategory,iPointVal) {
+	document.getElementById("Cat" + iCategory + "Pt" + iPointVal).onclick=null
+	document.getElementById("Cat" + iCategory + "Pt" + iPointVal).className = "tdPressed" // Changes class to change colors
+
+	QuestionParsed = iCategory * 5 - 5 + (iPointVal)/100 - 1 //Gets the array number of reference
+	document.getElementById("QuestionDat").innerHTML= gQuestions[QuestionParsed][4] + " (" + gQuestions[QuestionParsed][6] + " points)"
+	for(cntr = 0; cntr < gLetters.length; cntr++){document.getElementById(gLetters[cntr]).innerHTML = gQuestions[QuestionParsed][cntr];} // Puts data in buttons
+	
+	for(cntr = 0; cntr < gLetters.length; cntr++){document.getElementById(gLetters[cntr]).onclick = function qWrong(){nextTurn(true,false)};}// All questions are wrong
+	document.getElementById(gQuestions[QuestionParsed][5]).onclick = function qRight(){nextTurn()}; // Make selected answer right
+}
+</script>
+</head>
+<body>
+<h1>Welcome to Jeopardy</h1>
+<table BORDER="35" CELLPADDING="3" id="Board">
+<tr>
+<th>Mobs</th>
+<th>Items and Tools</th>
+<th>Player</th>
+<th>Biomes</th>
+<th>Crafting</th>
+</tr>
+<tr>
+<td id="Cat1Pt100" onClick="Jeopardy(1,100)">100</td>
+<td id="Cat2Pt100" onClick="Jeopardy(2,100)">100</td>
+<td id="Cat3Pt100" onClick="Jeopardy(3,100)">100</td>
+<td id="Cat4Pt100" onClick="Jeopardy(4,100)">100</td>
+<td id="Cat5Pt100" onClick="Jeopardy(5,100)">100</td>
+</tr>
+<tr>
+<td id="Cat1Pt200" onClick="Jeopardy(1,200)">200</td>
+<td id="Cat2Pt200" onClick="Jeopardy(2,200)">200</td>
+<td id="Cat3Pt200" onClick="Jeopardy(3,200)">200</td>
+<td id="Cat4Pt200" onClick="Jeopardy(4,200)">200</td>
+<td id="Cat5Pt200" onClick="Jeopardy(5,200)">200</td>
+</tr>
+<tr>
+<td id="Cat1Pt300" onClick="Jeopardy(1,300)">300</td>
+<td id="Cat2Pt300" onClick="Jeopardy(2,300)">300</td>
+<td id="Cat3Pt300" onClick="Jeopardy(3,300)">300</td>
+<td id="Cat4Pt300" onClick="Jeopardy(4,300)">300</td>
+<td id="Cat5Pt300" onClick="Jeopardy(5,300)">300</td>
+</tr>
+<tr>
+<td id="Cat1Pt400" onClick="Jeopardy(1,400)">400</td>
+<td id="Cat2Pt400" onClick="Jeopardy(2,400)">400</td>
+<td id="Cat3Pt400" onClick="Jeopardy(3,400)">400</td>
+<td id="Cat4Pt400" onClick="Jeopardy(4,400)">400</td>
+<td id="Cat5Pt400" onClick="Jeopardy(5,400)">400</td>
+</tr>
+<tr>
+<td id="Cat1Pt500" onClick="Jeopardy(1,500)">500</td>
+<td id="Cat2Pt500" onClick="Jeopardy(2,500)">500</td>
+<td id="Cat3Pt500" onClick="Jeopardy(3,500)">500</td>
+<td id="Cat4Pt500" onClick="Jeopardy(4,500)">500</td>
+<td id="Cat5Pt500" onClick="Jeopardy(5,500)">500</td>
+</tr>
+</table>
+<div id ="Stats">
+<p id="QuestionDat">Click on a question to begin</p>
+<p id="CurrPlayer"> It is currently Player 1's turn</p>
+<button id="A">A</button><br>
+<button id="B">B</button><br>
+<button id="C">C</button><br>
+<button id="D">D</button>
+<p id="P1Points">Player 1 has 0 points</p>
+<p id="P2Points">Player 2 has 0 points</p>
+</div>
+</body>
+</html>

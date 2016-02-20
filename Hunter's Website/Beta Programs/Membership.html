@@ -1,0 +1,43 @@
+
+<html>
+<head>
+<title>Hunter's Website| Membership</title>
+<LINK REL="SHORTCUT ICON" HREF="/favicon.ico"> 
+<link rel="stylesheet" type="text/css" href="CSS/main/css-0003.css" id="link"/>
+</head>
+<script>
+var username = form.user.value;
+var password = form.password1.value;
+var confirm = form.password2.value;
+function Membership(form)
+{
+var recipient = 'HunterB@cra-school.org',
+     subject   = 'Membership Join',
+     message  = 'I would like an account with the username:' + username + " and password:" + password + ".";
+}
+</script>
+<body id="body">
+<img src="Images/JPEG/HomePage/Menu/menu.jpg" width="100%" height="250" onclick="picturechange()" id="menu" onmouseup="picturenorm()">
+<script>
+today = new Date();
+day = today.getDay();
+arday = new Array("Images/JPEG/HomePage/Menu/menu.1.jpg", "Images/JPEG/HomePage/Menu/menu.2.jpg", "Images/JPEG/HomePage/Menu/menu.3.jpg", 
+"Images/JPEG/HomePage/Menu/menu.4.jpg", "Images/JPEG/HomePage/Menu/menu.5.jpg", "Images/JPEG/HomePage/Menu/menu.6.jpg", "Images/JPEG/HomePage/Menu/menu.jpg");
+document.getElementById("menu").src=arday[day];
+if (day == 0){document.getElementById("link").href="CSS/main/CSS-0003.1.css";}
+if (day == 1){document.getElementById("link").href="CSS/main/CSS-0003.2.css";}
+if (day == 2){document.getElementById("link").href="CSS/main/CSS-0003.3.css";}
+if (day == 3){document.getElementById("link").href="CSS/main/CSS-0003.4.css";}
+if (day == 4){document.getElementById("link").href="CSS/main/CSS-0003.5.css";}
+if (day == 5){document.getElementById("link").href="CSS/main/CSS-0003.6.css";}
+if (day == 6){document.getElementById("link").href="CSS/main/CSS-0003.css";}
+</script>
+<p id="intro"> A membership to this website allows access to Member's only Webpages. The best thing about it is... It is FREE!!!! Fill out the form below to join.</p>
+<FORM NAME="myform" ACTION="" METHOD="GET" id="Battle Form"> First Name:<BR>
+  <INPUT TYPE="text" NAME="user" VALUE=""><Br> Password: <BR>
+  <INPUT TYPE="password" NAME="password1" VALUE=""> Confirm Password:<br>
+  <INPUT TYPE="password" NAME="password2" VALUE="">
+  <INPUT TYPE="button" NAME="button1" Value="Join!" onClick="Membership(this.form)"><p>
+</FORM>
+</body>
+</html>

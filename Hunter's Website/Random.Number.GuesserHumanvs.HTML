@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+<TITLE>The Guessing Game </TITLE>
+<link rel="stylesheet" type="text/css" href="CSS/main/css-0003.css" id="link"/>
+<SCRIPT LANGUAGE="JavaScript">
+ var wins = 1
+ var losses = 0
+ var games = 1
+ var aiwins =1
+ var ailosses = 0
+ var aigames = 1
+function readText (form) {
+ var number = form.UserNum.value;
+ var number2 =form.UserNum2.value;
+ var randomnumber = Math.floor(Math.random()*11)
+ var average = (wins-1)/games*100
+ var aiaverage = (aiwins-1)/games*100
+ var randainum = Math.floor(Math.random()*11)
+ var ainame=Math.floor(Math.random()*7)
+   if (number == randomnumber)
+	{
+	document.getElementById("answer").innerHTML="Correct! The number was " + randomnumber + ".";
+	document.getElementById("guessed").innerHTML="You guessed " + number + ".";
+	if(wins==1) {
+	document.getElementById("wins").innerHTML="You have won " + wins + " game today.";
+	}
+	else 
+	{
+	document.getElementById("wins").innerHTML="You have won " + wins + " games today.";
+	}
+	wins+1
+	wins++
+	}
+  else
+  {
+  if (number =="")
+  {
+  document.getElementById("guessed").innerHTML="You guessed 0.";
+  }
+  else
+  {
+  document.getElementById("guessed").innerHTML="You guessed " + number + ".";
+  }
+  document.getElementById("answer").innerHTML="Sorry that is incorrect. The number was " + randomnumber + ".";
+	losses++
+  }
+ if (losses == 1) {
+	document.getElementById("losses").innerHTML="You have lost " + losses + " game today.";
+	}
+ else {
+    document.getElementById("losses").innerHTML="You have lost " + losses + " games today.";
+    }
+  games++
+  document.getElementById("avg").innerHTML="You have won " + average + "% of all games played";
+   /* End of the Player script */
+   /* Winning */
+ /* Beginning of Ai script */
+   if (number2 == randomnumber)
+	{
+	document.getElementById("aianswer").innerHTML="Correct! The number was " + randomnumber + ".";
+	if(wins==1) {
+	document.getElementById("aiwins").innerHTML="You have won " + aiwins + " game today.";
+	}
+	else 
+	{
+	document.getElementById("aiwins").innerHTML="You have won " + aiwins + " games today.";
+	}
+	aiwins+1
+	aiwins++
+	}
+  else
+  {
+  document.getElementById("aianswer").innerHTML="Sorry that is incorrect. The number was " + randomnumber + ".";
+	document.getElementById("aiguessed").innerHTML="You guessed " + number2 + ".";
+	ailosses++
+ if (ailosses == 1) {
+	document.getElementById("ailosses").innerHTML="You have lost " + ailosses + " game today.";
+	}
+ else {
+    document.getElementById("ailosses").innerHTML="You have lost " + ailosses + " games today.";
+    }
+  }
+  document.getElementById("aiavg").innerHTML="You have won " + aiaverage + "% of all games played";
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<h1>Player 1</h1>
+<p id="rules"> </p>
+<div style="color:lime" id="formcolor">
+<FORM NAME="myform" ACTION="" METHOD="GET">
+Enter your number:
+<div>
+<INPUT TYPE="text" NAME="UserNum" VALUE=""><P>
+<p id="answer">This is where the answers will show up.</p>
+<p id="guessed">This is the number you guessed.</p>
+<p id="wins">This is where it will show you how many wins you have.</p>
+<p id="losses">This is how many losses you have</p>
+<p id="avg">The average of how many times you have won.</p>
+<div align=center style="color:white">
+<INPUT TYPE="button" value="  Play Round " NAME="button1" onClick="readText(this.form)" width="101" height="20">
+<br>
+<img src="Images/JPEG/Games/RandNumGame/dice.jpg">
+</div>
+</h2 id="youwin"></h2>
+<h1 id="randname">Player 2</h1>
+Enter your number:
+<INPUT TYPE="text" NAME="UserNum2" VALUE="">
+<p id="aianswer">This is where the answers will show up for player 2.</p>
+<p id="aiguessed">This is where the number will show when player 2 guessed.</p>
+<p id="aiwins">This is where it will show you how many wins player 2 has.</p>
+<p id="ailosses">This is how many losses player 2 has</p>
+<p id="aiavg">The average of how many times player 2 has won.</p>
+<h2>Rules</h2>
+<p>How to play: First pick a number from 1 to 10. Then type it in the text box. Click the play round button. The computer will tell you if you were correct or wrong. First one to 25 wins wins!</p>
+</FORM>
+<script>
+today = new Date();
+day = today.getDay();
+if (day == 0){document.getElementById("link").href="CSS/main/CSS-0003.1.css"; document.getElementById("formcolor").style.color="white"}
+if (day == 1){document.getElementById("link").href="CSS/main/CSS-0003.2.css";document.getElementById("formcolor").style.color="yellow"}
+if (day == 2){document.getElementById("link").href="CSS/main/CSS-0003.3.css";document.getElementById("formcolor").style.color="yellow"}
+if (day == 3){document.getElementById("link").href="CSS/main/CSS-0003.4.css";document.getElementById("formcolor").style.color="blue"}
+if (day == 4){document.getElementById("link").href="CSS/main/CSS-0003.5.css";document.getElementById("formcolor").style.color="white"}
+if (day == 5){document.getElementById("link").href="CSS/main/CSS-0003.6.css";document.getElementById("formcolor").style.color="blue"}
+if (day == 6){document.getElementById("link").href="CSS/main/CSS-0003.css";document.getElementById("formcolor").style.color="goldenrod"}
+</script>
+</BODY>
+</HTML>

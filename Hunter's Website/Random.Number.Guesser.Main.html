@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="CSS/main/css-0003.css" id="link"/>
+<script>
+function gotoaigame(){
+window.location="Random Number GuesserAivs.html";
+}
+function gotohumangame(){
+window.location="Random Number GuesserHumanvs.html";
+}
+</script>
+</head>
+<body>
+<h2> Start a game: Random Number Guesser 2</h2>
+<INPUT TYPE="button" NAME="button1" Value="1 player game" onClick="gotoaigame()">
+<INPUT TYPE="button" NAME="button1" Value="2 player game" onClick="gotohumangame()">
+<script>
+today = new Date();
+day = today.getDay();
+if (day == 0){document.getElementById("link").href="CSS/main/CSS-0003.1.css";}
+if (day == 1){document.getElementById("link").href="CSS/main/CSS-0003.2.css";}
+if (day == 2){document.getElementById("link").href="CSS/main/CSS-0003.3.css";}
+if (day == 3){document.getElementById("link").href="CSS/main/CSS-0003.4.css";}
+if (day == 4){document.getElementById("link").href="CSS/main/CSS-0003.5.css";}
+if (day == 5){document.getElementById("link").href="CSS/main/CSS-0003.6.css";}
+if (day == 6){document.getElementById("link").href="CSS/main/CSS-0003.css";}
+</script>
+</body>
+</html>

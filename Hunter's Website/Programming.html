@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Programming</title>
+<link rel="stylesheet" type="text/css" href="CSS/main/css-0003.css"  id="link"/>
+<style>
+p.demo {border-style:dashed;border-width:5px; border-color:gray;color:gray;background-color:white;}
+</style>
+</head>
+<body>
+<h1>Programming</h1>
+<iframe src="programmenu.html" width="1670" height="60" align="top" frameborder="0"></iframe>
+<h2>History:</h2>
+<p> Programming has been around since the 1940's when computers were developed. The first code consisted of binary (1s and 0s). This first code was called machine code. machine code is a 
+low-level programming language.High-level languages deal with variables, arrays, objects, complex arithmetic or boolean expressions, subroutines and functions, loops, threads, locks, and 
+other abstract computer science concepts, with a focus on usability over optimal program efficiency. Computers today run on machine code. But programmers don't program in that language anymore.
+That is because it is extremely complex to understand what is being programmed in machine code. Here is a statement from the html code: </p>
+<p class="demo"> &lsaquo;title&rsaquo; Programming &lsaquo;/title&rsaquo; </p>
+<p> How many of you understood this statement above? For those of you who don't understand the &lsaquo;title&rsaquo; tag said that this is the title of the document. Then I put in the value that I 
+wanted the title to be. In this case I wanted the title to be Programming. The HTML code requires an ending tag. That is why there is &lsaquo;/title&rsaquo;. Without this tag the computer doesn't 
+know where to stop the value of the title.</p>
+<h2>The languages the website uses</h2>
+<p>This website uses <b>three</b> different high-level programming languages to get the desired effect. We used Hyper Text Markup Language (HTML), Javascript, and CSS (Cascading Style Sheets).
+HTML is the basic building block of all websites. You can use it to visualize data through text, forms, images, and much more! It is a simple language is easy to learn.
+I got good at it in about 5 months. Cascading Style Sheets are used for consistent colors across many pages. It makes it so you don't have to type as much style information when you make a new page and
+used for global styles. Here is an example of CSS:</p>
+<div class="CSSDemo"></div>
+<p>
+JavaScript is a scripting language for making the website dynamic. It can do something when you click a button, move the mouse or enter the site. It is a bit more complicated than that. Here is a 
+simple statement from my code:
+</p>
+<p class="demo"> function bgcmagenta(){document.body.style.backgroundColor="magenta";}</p>
+<p> This is a code from the JavaScript Styler I made. The name of this function is bgcmagenta(). This is the name it will be referenced as in an event. I can use the function when someone clicks an element like this: </p>
+<p class="demo"> &lsaquo;button onclick="bgcmagenta()"&rsaquo; Turn the background color to magenta&lsaquo;/button&rsaquo; </p>
+<p> Then the document changes the current background color to magenta.</p>
+<script>
+today = new Date();
+day = today.getDay();
+if (day == 0){document.getElementById("link").href="CSS/main/CSS-0003.1.css";}
+if (day == 1){document.getElementById("link").href="CSS/main/CSS-0003.2.css";}
+if (day == 2){document.getElementById("link").href="CSS/main/CSS-0003.3.css";}
+if (day == 3){document.getElementById("link").href="CSS/main/CSS-0003.4.css";}
+if (day == 4){document.getElementById("link").href="CSS/main/CSS-0003.5.css";}
+if (day == 5){document.getElementById("link").href="CSS/main/CSS-0003.6.css";}
+if (day == 6){document.getElementById("link").href="CSS/main/CSS-0003.css";}
+</script>
+</body>
+</html>

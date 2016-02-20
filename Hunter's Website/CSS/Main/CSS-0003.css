@@ -1,0 +1,52 @@
+body {background-color:midnightblue;}
+H1 {color:lime;font-size:36px}
+H2 {color:lime;font-size:30px}
+H3 {color:lime;font-size:24px}
+H4 {color:lime;}
+A {color:pink;font-size:20px}
+p {font-family:arial;font-size:20px;color:goldenrod}
+p.demo {border-style:dashed;border-width:5px; border-color:gray;color:gray;background-color:white;}
+button.JSdemo{border-style:solid;border-width:7px;border-color:goldenrod;}
+
+div.CSSDemo
+{
+width:100px;
+height:100px;
+background:red;
+animation:myfirst 60s;
+-webkit-animation:myfirst 60s; /* Safari and Chrome */
+}
+
+@keyframes myfirst
+{
+14%   {background:red;}
+28%  {background:orange;}
+42%  {background:yellow;}
+57% {background:green;}
+56% {background:blue;}
+71% {background:indigo;}
+85% {background:violet;}
+100% {background:red;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+14%   {background:red;}
+28%  {background:orange;}
+42%  {background:yellow;}
+57% {background:green;}
+56% {background:blue;}
+71% {background:indigo;}
+100% {background:violet;}
+}
+
+
+.main {
+float:left;
+width:100%;
+}
+#sidebar {
+float:right;
+width:250px;
+background:orange;
+}

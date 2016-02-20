@@ -1,0 +1,99 @@
+HTML Programming by Hunter Boles
+NOTES{
+When Setting up this website these files all need to be in the same folder.
+All files from previous versions are needed.}
+
+Version 1.0
+----------------------------------
+1. Base Files Added As of ??/??/12 to 3/08/13
+	A. HTML
+	     Game Guide Page.HTML
+	     Home Page.HTML
+	     Language Page.HTML
+	     Link Page.HTML
+	B.JPG
+	    Computer.JPG
+	    Lang.JPG
+	    Link.JPG
+2. Internet Map
+
+	|->Game Guide Page.HTML
+Homepage-+->Language Page.HTML
+	|->Link Page.HTML
+
+
+Version 1.1
+----------------------------------
+1.Base Files Added As of 3/08/13 to 6/6/13
+	A. HTML
+	     School Resources.HTML
+	     English.HTML
+	     Math.HTML
+	     Geography.HTML
+	     Science.HTML
+	     AOE3.HTML
+	     RON.HTML
+	     Spore.HTML
+	B.JPG
+	    English.JPG
+	    Geography.JPG
+	    Math.JPG
+	    Science.JPG
+	C.MP3
+	    Nerdy.MP3*
+2. Internet Map
+			        |->AOE3.HTML
+	|->Game Guide Page.HTML+->RON.HTML
+	|	                          |->Spore.HTML
+Homepage+->Language Page.HTML
+	|
+	|->Link Page.HTML
+	|
+	|                                |->English Section.HTML
+	|->School Resources+->Math Section.HTML
+		               |->Geography Section.HTML
+		               |->Science Section.HTML
+3.What To Expect in the next version
+	1. More JPG images to view
+	2.Icon instead of I.E.8 icon
+	3.More in the school resources section
+	4. Animations
+	5. More JavaScript scripts
+
+
+Version 1.2
+----------------------------------
+1.Required base files as of 6/6/13
+	A.HTML
+	    CIV4.HTML
+	    Menu.HTML
+	B.CSS
+	    CSS-0003.CSS
+	C.JPG
+	    Menu.JPG
+
+2.Internet Map
+			                  |->AOE3.HTML
+	          |->Game Guide Page.HTML+->RON.HTML
+	          |		                  |->CIV4.HTML
+	          |	                                    |->Spore.HTML
+Homepage&Menu+->Language Page.HTML
+	          |
+	          |->Link Page.HTML
+	          |
+	          |                                |->English Section.HTML
+	          |->School Resources+->Math Section.HTML
+		                        |->Geography Section.HTML
+		                        |->Science Section.HTML
+
+
+
+*File taken out of all future versions
+
+
+
+
+
+
+
+	

@@ -1,0 +1,20 @@
+ body {background-color:#1e7936}
+a
+{
+border-style:solid;
+border-color:#yellow;
+}
+a:link,a:visited
+{display:block;
+font-weight:bold;
+color:yellow;
+background-color:#1e7936;
+width:120px;
+text-align:center;
+padding:4px;
+text-decoration:none;}
+a:hover,a:active
+{background-color:yellow;
+color:#1e7936;
+text-decoration:underline;}
+}

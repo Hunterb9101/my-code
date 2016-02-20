@@ -1,0 +1,552 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="CSS/main/css-0003.css" id="link"/>
+<script type="text/javascript">
+var Letter1 = "  ";
+var Letter2 = "  ";
+var Letter3 = "  ";
+var Letter4 = "  ";
+var Letter5 = "  ";
+var Letter6 = "  ";
+var Letter7 = "  ";
+var Letter8 = "  ";
+var Letter9 = "  ";
+var Letter10 = "  ";
+var Letter11 = "  ";
+var Letter12 = "  ";
+var Letter13 = "  ";
+var Letter14 = "  ";
+var Letter15 = "  ";
+var Letter16 = "  ";
+function Translate(form){
+    var Data= form.data.value;
+	//Check the First Letter
+	if (Data.indexOf("A") == 0 || Data.indexOf("a") == 0){Letter1="Ro";}
+	else if (Data.indexOf("B") == 0 || Data.indexOf("b") == 0){Letter1="Ze";}
+	else if (Data.indexOf("C") == 0 || Data.indexOf("c") == 0){Letter1="Ma";}
+	else if (Data.indexOf("D") == 0 || Data.indexOf("d") == 0){Letter1="Ku";}
+	else if (Data.indexOf("E") == 0 || Data.indexOf("e") == 0){Letter1="Vo";}
+	else if (Data.indexOf("F") == 0 || Data.indexOf("f") == 0){Letter1="Ta";}
+	else if (Data.indexOf("G") == 0 || Data.indexOf("g") == 0){Letter1="Bu";}
+	else if (Data.indexOf("H") == 0 || Data.indexOf("h") == 0){Letter1="Ji";}
+	else if (Data.indexOf("I") == 0 || Data.indexOf("i") == 0){Letter1="Zo";}
+	else if (Data.indexOf("J") == 0 || Data.indexOf("j") == 0){Letter1="Ci";}
+	else if (Data.indexOf("K") == 0 || Data.indexOf("k") == 0){Letter1="Ni";}
+	else if (Data.indexOf("L") == 0 || Data.indexOf("l") == 0){Letter1="Bi";}
+	else if (Data.indexOf("M") == 0 || Data.indexOf("m") == 0){Letter1="Va";}
+	else if (Data.indexOf("N") == 0 || Data.indexOf("n") == 0){Letter1="Ka";}
+	else if (Data.indexOf("O") == 0 || Data.indexOf("o") == 0){Letter1="Ba";}
+	else if (Data.indexOf("P") == 0 || Data.indexOf("P") == 0){Letter1="Zi";}
+	else if (Data.indexOf("Q") == 0 || Data.indexOf("q") == 0){Letter1="Ju";}
+	else if (Data.indexOf("R") == 0 || Data.indexOf("r") == 0){Letter1="Ve";}
+	else if (Data.indexOf("S") == 0 || Data.indexOf("s") == 0){Letter1="Me";}
+	else if (Data.indexOf("T") == 0 || Data.indexOf("t") == 0){Letter1="Su";}
+	else if (Data.indexOf("U") == 0 || Data.indexOf("u") == 0){Letter1="To";}
+	else if (Data.indexOf("V") == 0 || Data.indexOf("v") == 0){Letter1="Be";}
+	else if (Data.indexOf("W") == 0 || Data.indexOf("w") == 0){Letter1="Fa";}
+	else if (Data.indexOf("X") == 0 || Data.indexOf("x") == 0){Letter1="Fe";}
+	else if (Data.indexOf("Y") == 0 || Data.indexOf("y") == 0){Letter1="Wu";}
+	else if (Data.indexOf("Z") == 0 || Data.indexOf("z") == 0){Letter1="Ki";}
+	// Check to see if any numbers were the input..
+	else if (Data.indexOf("0") == 0){Letter1="KiVoVeBa";}
+	else if (Data.indexOf("1") == 0){Letter1="BoKaVo";}
+	else if (Data.indexOf("2") == 0){Letter1="SuFaBa";}
+	else if (Data.indexOf("3") == 0){Letter1="SuJiVeVoVo";}
+	else if (Data.indexOf("4") == 0){Letter1="TaBaToVe";}
+	else if (Data.indexOf("5") == 0){Letter1="TaZoBeVo";}
+	else if (Data.indexOf("6") == 0){Letter1="MeZoFe";}
+	else if (Data.indexOf("7") == 0){Letter1="MeVoBeVoKa";}
+	else if (Data.indexOf("8") == 0){Letter1="VoZoBuJiSu";}
+	else if (Data.indexOf("9") == 0){Letter1="KaZoKaVo";}
+	// Check if a number/invalid character is in the middle of the phrase/word.
+	else if (Data.indexOf("0") > 0){alert("This translation will be inaccurate with a number in the middle of the phrase/word");}
+	else if (Data.indexOf("1") > 0){alert("This translation will be inaccurate with a number in the middle of the phrase/word");}
+	else if (Data.indexOf("2") > 0){alert("This translation will be inaccurate with a number in the middle of the phrase/word");}
+	else if (Data.indexOf("3") > 0){alert("This translation will be inaccurate with a number in the middle of the phrase/word");}
+	else if (Data.indexOf("4") > 0){alert("This translation will be inaccurate with a number in the middle of the phrase/word");}
+	else if (Data.indexOf("5") > 0){alert("This translation will be inaccurate with a number in the middle of the phrase/word");}
+	else if (Data.indexOf("6") > 0){alert("This translation will be inaccurate with a number in the middle of the phrase/word");}
+	else if (Data.indexOf("7") > 0){alert("This translation will be inaccurate with a number in the middle of the phrase/word");}
+	else if (Data.indexOf("8") > 0){alert("This translation will be inaccurate with a number in the middle of the phrase/word");}
+	else if (Data.indexOf("9") > 0){alert("This translation will be inaccurate with a number in the middle of the phrase/word");}
+	else if (Data.indexOf("!") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("@") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("#") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("$") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("%") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("^") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("&") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("*") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("(") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf(")") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("-") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("_") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("+") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("=") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("[") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("]") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("{") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("}") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("|") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf(";") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf(":") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf(",") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("<") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf(",") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf(">") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf(".") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("/") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else if (Data.indexOf("?") >= 0){alert("This translation script doesn't allow any reserved characters like !,@,#,$,%,^,&,*,(),-,_,=,+,<,>,?,,,.,{}, or []... ");}
+	else{alert("You didn't enter anything...");}
+	// Second Letter
+	if (Data.indexOf("A") == 1 || Data.indexOf("a") == 1){Letter2="Ro";}
+	else if (Data.indexOf("B",1) == 1 || Data.indexOf("b",1) == 1){Letter2="Ze";}
+	else if (Data.indexOf("C",1) == 1 || Data.indexOf("c",1) == 1){Letter2="Ma";}
+	else if (Data.indexOf("D",1) == 1 || Data.indexOf("d",1) == 1){Letter2="Ku";}
+	else if (Data.indexOf("E",1) == 1 || Data.indexOf("e",1) == 1){Letter2="Vo";}
+	else if (Data.indexOf("F",1) == 1 || Data.indexOf("f",1) == 1){Letter2="Ta";}
+	else if (Data.indexOf("G",1) == 1 || Data.indexOf("g",1) == 1){Letter2="Bu";}
+	else if (Data.indexOf("H",1) == 1 || Data.indexOf("h",1) == 1){Letter2="Ji";}
+	else if (Data.indexOf("I",1) == 1 || Data.indexOf("i",1) == 1){Letter2="Zo";}
+	else if (Data.indexOf("J",1) == 1 || Data.indexOf("j",1) == 1){Letter2="Ci";}
+	else if (Data.indexOf("K",1) == 1 || Data.indexOf("k",1) == 1){Letter2="Ni";}
+	else if (Data.indexOf("L",1) == 1 || Data.indexOf("l",1) == 1){Letter2="Bi";}
+	else if (Data.indexOf("M",1) == 1 || Data.indexOf("m",1) == 1){Letter2="Va";}
+	else if (Data.indexOf("N",1) == 1 || Data.indexOf("n",1) == 1){Letter2="Ka";}
+	else if (Data.indexOf("O",1) == 1 || Data.indexOf("o",1) == 1){Letter2="Ba";}
+	else if (Data.indexOf("P",1) == 1 || Data.indexOf("P",1) == 1){Letter2="Zi";}
+	else if (Data.indexOf("Q",1) == 1 || Data.indexOf("q",1) == 1){Letter2="Ju";}
+	else if (Data.indexOf("R",1) == 1 || Data.indexOf("r",1) == 1){Letter2="Ve";}
+	else if (Data.indexOf("S",1) == 1 || Data.indexOf("s",1) == 1){Letter2="Me";}
+	else if (Data.indexOf("T",1) == 1 || Data.indexOf("t",1) == 1){Letter2="Su";}
+	else if (Data.indexOf("U",1) == 1 || Data.indexOf("u",1) == 1){Letter2="To";}
+	else if (Data.indexOf("V",1) == 1 || Data.indexOf("v",1) == 1){Letter2="Be";}
+	else if (Data.indexOf("W",1) == 1 || Data.indexOf("w",1) == 1){Letter2="Fa";}
+	else if (Data.indexOf("X",1) == 1 || Data.indexOf("x",1) == 1){Letter2="Fe";}
+	else if (Data.indexOf("Y",1) == 1 || Data.indexOf("y",1) == 1){Letter2="Wu";}
+	else if (Data.indexOf("Z",1) == 1 || Data.indexOf("z",1) == 1){Letter2="Ki";}
+	// Third Letter
+	if (Data.indexOf("A") == 2 || Data.indexOf("a") == 2){Letter3="Ro";}
+	else if (Data.indexOf("B",2) == 2 || Data.indexOf("b",2) == 2){Letter3="Ze";}
+	else if (Data.indexOf("C",2) == 2 || Data.indexOf("c",2) == 2){Letter3="Ma";}
+	else if (Data.indexOf("D",2) == 2 || Data.indexOf("d",2) == 2){Letter3="Ku";}
+	else if (Data.indexOf("E",2) == 2 || Data.indexOf("e",2) == 2){Letter3="Vo";}
+	else if (Data.indexOf("F",2) == 2 || Data.indexOf("f",2) == 2){Letter3="Ta";}
+	else if (Data.indexOf("G",2) == 2 || Data.indexOf("g",2) == 2){Letter3="Bu";}
+	else if (Data.indexOf("H",2) == 2 || Data.indexOf("h",2) == 2){Letter3="Ji";}
+	else if (Data.indexOf("I",2) == 2 || Data.indexOf("i",2) == 2){Letter3="Zo";}
+	else if (Data.indexOf("J",2) == 2 || Data.indexOf("j",2) == 2){Letter3="Ci";}
+	else if (Data.indexOf("K",2) == 2 || Data.indexOf("k",2) == 2){Letter3="Ni";}
+	else if (Data.indexOf("L",2) == 2 || Data.indexOf("l",2) == 2){Letter3="Bi";}
+	else if (Data.indexOf("M",2) == 2 || Data.indexOf("m",2) == 2){Letter3="Va";}
+	else if (Data.indexOf("N",2) == 2 || Data.indexOf("n",2) == 2){Letter3="Ka";}
+	else if (Data.indexOf("O",2) == 2 || Data.indexOf("o",2) == 2){Letter3="Ba";}
+	else if (Data.indexOf("P",2) == 2 || Data.indexOf("P",2) == 2){Letter3="Zi";}
+	else if (Data.indexOf("Q",2) == 2 || Data.indexOf("q",2) == 2){Letter3="Ju";}
+	else if (Data.indexOf("R",2) == 2 || Data.indexOf("r",2) == 2){Letter3="Ve";}
+	else if (Data.indexOf("S",2) == 2 || Data.indexOf("s",2) == 2){Letter3="Me";}
+	else if (Data.indexOf("T",2) == 2 || Data.indexOf("t",2) == 2){Letter3="Su";}
+	else if (Data.indexOf("U",2) == 2 || Data.indexOf("u",2) == 2){Letter3="To";}
+	else if (Data.indexOf("V",2) == 2 || Data.indexOf("v",2) == 2){Letter3="Be";}
+	else if (Data.indexOf("W",2) == 2 || Data.indexOf("w",2) == 2){Letter3="Fa";}
+	else if (Data.indexOf("X",2) == 2 || Data.indexOf("x",2) == 2){Letter3="Fe";}
+	else if (Data.indexOf("Y",2) == 2 || Data.indexOf("y",2) == 2){Letter3="Wu";}
+	else if (Data.indexOf("Z",2) == 2 || Data.indexOf("z",2) == 2){Letter3="Ki";}
+	// Fourth Letter
+	if (Data.indexOf("A") == 3 || Data.indexOf("a") == 3){Letter4="Ro";}
+	else if (Data.indexOf("B",3) == 3 || Data.indexOf("b",3) == 3){Letter4="Ze";}
+	else if (Data.indexOf("C",3) == 3 || Data.indexOf("c",3) == 3){Letter4="Ma";}
+	else if (Data.indexOf("D",3) == 3 || Data.indexOf("d",3) == 3){Letter4="Ku";}
+	else if (Data.indexOf("E",3) == 3 || Data.indexOf("e",3) == 3){Letter4="Vo";}
+	else if (Data.indexOf("F",3) == 3 || Data.indexOf("f",3) == 3){Letter4="Ta";}
+	else if (Data.indexOf("G",3) == 3 || Data.indexOf("g",3) == 3){Letter4="Bu";}
+	else if (Data.indexOf("H",3) == 3 || Data.indexOf("h",3) == 3){Letter4="Ji";}
+	else if (Data.indexOf("I",3) == 3 || Data.indexOf("i",3) == 3){Letter4="Zo";}
+	else if (Data.indexOf("J",3) == 3 || Data.indexOf("j",3) == 3){Letter4="Ci";}
+	else if (Data.indexOf("K",3) == 3 || Data.indexOf("k",3) == 3){Letter4="Ni";}
+	else if (Data.indexOf("L",3) == 3 || Data.indexOf("l",3) == 3){Letter4="Bi";}
+	else if (Data.indexOf("M",3) == 3 || Data.indexOf("m",3) == 3){Letter4="Va";}
+	else if (Data.indexOf("N",3) == 3 || Data.indexOf("n",3) == 3){Letter4="Ka";}
+	else if (Data.indexOf("O",3) == 3 || Data.indexOf("o",3) == 3){Letter4="Ba";}
+	else if (Data.indexOf("P",3) == 3 || Data.indexOf("P",3) == 3){Letter4="Zi";}
+	else if (Data.indexOf("Q",3) == 3 || Data.indexOf("q",3) == 3){Letter4="Ju";}
+	else if (Data.indexOf("R",3) == 3 || Data.indexOf("r",3) == 3){Letter4="Ve";}
+	else if (Data.indexOf("S",3) == 3 || Data.indexOf("s",3) == 3){Letter4="Me";}
+	else if (Data.indexOf("T",3) == 3 || Data.indexOf("t",3) == 3){Letter4="Su";}
+	else if (Data.indexOf("U",3) == 3 || Data.indexOf("u",3) == 3){Letter4="To";}
+	else if (Data.indexOf("V",3) == 3 || Data.indexOf("v",3) == 3){Letter4="Be";}
+	else if (Data.indexOf("W",3) == 3 || Data.indexOf("w",3) == 3){Letter4="Fa";}
+	else if (Data.indexOf("X",3) == 3 || Data.indexOf("x",3) == 3){Letter4="Fe";}
+	else if (Data.indexOf("Y",3) == 3 || Data.indexOf("y",3) == 3){Letter4="Wu";}
+	else if (Data.indexOf("Z",3) == 3 || Data.indexOf("z",3) == 3){Letter4="Ki";}
+	//Fifth Letter
+	if (Data.indexOf("A") == 4 || Data.indexOf("a") == 4){Letter5="Ro";}
+	else if (Data.indexOf("B",4) == 4 || Data.indexOf("b",4) == 4){Letter5="Ze";}
+	else if (Data.indexOf("C",4) == 4 || Data.indexOf("c",4) == 4){Letter5="Ma";}
+	else if (Data.indexOf("D",4) == 4 || Data.indexOf("d",4) == 4){Letter5="Ku";}
+	else if (Data.indexOf("E",4) == 4 || Data.indexOf("e",4) == 4){Letter5="Vo";}
+	else if (Data.indexOf("F",4) == 4 || Data.indexOf("f",4) == 4){Letter5="Ta";}
+	else if (Data.indexOf("G",4) == 4 || Data.indexOf("g",4) == 4){Letter5="Bu";}
+	else if (Data.indexOf("H",4) == 4 || Data.indexOf("h",4) == 4){Letter5="Ji";}
+	else if (Data.indexOf("I",4) == 4 || Data.indexOf("i",4) == 4){Letter5="Zo";}
+	else if (Data.indexOf("J",4) == 4 || Data.indexOf("j",4) == 4){Letter5="Ci";}
+	else if (Data.indexOf("K",4) == 4 || Data.indexOf("k",4) == 4){Letter5="Ni";}
+	else if (Data.indexOf("L",4) == 4 || Data.indexOf("l",4) == 4){Letter5="Bi";}
+	else if (Data.indexOf("M",4) == 4 || Data.indexOf("m",4) == 4){Letter5="Va";}
+	else if (Data.indexOf("N",4) == 4 || Data.indexOf("n",4) == 4){Letter5="Ka";}
+	else if (Data.indexOf("O",4) == 4 || Data.indexOf("o",4) == 4){Letter5="Ba";}
+	else if (Data.indexOf("P",4) == 4 || Data.indexOf("P",4) == 4){Letter5="Zi";}
+	else if (Data.indexOf("Q",4) == 4 || Data.indexOf("q",4) == 4){Letter5="Ju";}
+	else if (Data.indexOf("R",4) == 4 || Data.indexOf("r",4) == 4){Letter5="Ve";}
+	else if (Data.indexOf("S",4) == 4 || Data.indexOf("s",4) == 4){Letter5="Me";}
+	else if (Data.indexOf("T",4) == 4 || Data.indexOf("t",4) == 4){Letter5="Su";}
+	else if (Data.indexOf("U",4) == 4 || Data.indexOf("u",4) == 4){Letter5="To";}
+	else if (Data.indexOf("V",4) == 4 || Data.indexOf("v",4) == 4){Letter5="Be";}
+	else if (Data.indexOf("W",4) == 4 || Data.indexOf("w",4) == 4){Letter5="Fa";}
+	else if (Data.indexOf("X",4) == 4 || Data.indexOf("x",4) == 4){Letter5="Fe";}
+	else if (Data.indexOf("Y",4) == 4 || Data.indexOf("y",4) == 4){Letter5="Wu";}
+	else if (Data.indexOf("Z",4) == 4 || Data.indexOf("z",4) == 4){Letter5="Ki";}
+	//Sixth Letter
+	if (Data.indexOf("A") == 5 || Data.indexOf("a") == 5){Letter6="Ro";}
+	else if (Data.indexOf("B",5) == 5 || Data.indexOf("b",5) == 5){Letter6="Ze";}
+	else if (Data.indexOf("C",5) == 5 || Data.indexOf("c",5) == 5){Letter6="Ma";}
+	else if (Data.indexOf("D",5) == 5 || Data.indexOf("d",5) == 5){Letter6="Ku";}
+	else if (Data.indexOf("E",5) == 5 || Data.indexOf("e",5) == 5){Letter6="Vo";}
+	else if (Data.indexOf("F",5) == 5 || Data.indexOf("f",5) == 5){Letter6="Ta";}
+	else if (Data.indexOf("G",5) == 5 || Data.indexOf("g",5) == 5){Letter6="Bu";}
+	else if (Data.indexOf("H",5) == 5 || Data.indexOf("h",5) == 5){Letter6="Ji";}
+	else if (Data.indexOf("I",5) == 5 || Data.indexOf("i",5) == 5){Letter6="Zo";}
+	else if (Data.indexOf("J",5) == 5 || Data.indexOf("j",5) == 5){Letter6="Ci";}
+	else if (Data.indexOf("K",5) == 5 || Data.indexOf("k",5) == 5){Letter6="Ni";}
+	else if (Data.indexOf("L",5) == 5 || Data.indexOf("l",5) == 5){Letter6="Bi";}
+	else if (Data.indexOf("M",5) == 5 || Data.indexOf("m",5) == 5){Letter6="Va";}
+	else if (Data.indexOf("N",5) == 5 || Data.indexOf("n",5) == 5){Letter6="Ka";}
+	else if (Data.indexOf("O",5) == 5 || Data.indexOf("o",5) == 5){Letter6="Ba";}
+	else if (Data.indexOf("P",5) == 5 || Data.indexOf("P",5) == 5){Letter6="Zi";}
+	else if (Data.indexOf("Q",5) == 5 || Data.indexOf("q",5) == 5){Letter6="Ju";}
+	else if (Data.indexOf("R",5) == 5 || Data.indexOf("r",5) == 5){Letter6="Ve";}
+	else if (Data.indexOf("S",5) == 5 || Data.indexOf("s",5) == 5){Letter6="Me";}
+	else if (Data.indexOf("T",5) == 5 || Data.indexOf("t",5) == 5){Letter6="Su";}
+	else if (Data.indexOf("U",5) == 5 || Data.indexOf("u",5) == 5){Letter6="To";}
+	else if (Data.indexOf("V",5) == 5 || Data.indexOf("v",5) == 5){Letter6="Be";}
+	else if (Data.indexOf("W",5) == 5 || Data.indexOf("w",5) == 5){Letter6="Fa";}
+	else if (Data.indexOf("X",5) == 5 || Data.indexOf("x",5) == 5){Letter6="Fe";}
+	else if (Data.indexOf("Y",5) == 5 || Data.indexOf("y",5) == 5){Letter6="Wu";}
+	else if (Data.indexOf("Z",5) == 5 || Data.indexOf("z",5) == 5){Letter6="Ki";}
+	//Seventh Letter
+	if (Data.indexOf("A") == 6 || Data.indexOf("a") == 6){Letter7="Ro";}
+	else if (Data.indexOf("B",6) == 6 || Data.indexOf("b",6) == 6){Letter7="Ze";}
+	else if (Data.indexOf("C",6) == 6 || Data.indexOf("c",6) == 6){Letter7="Ma";}
+	else if (Data.indexOf("D",6) == 6 || Data.indexOf("d",6) == 6){Letter7="Ku";}
+	else if (Data.indexOf("E",6) == 6 || Data.indexOf("e",6) == 6){Letter7="Vo";}
+	else if (Data.indexOf("F",6) == 6 || Data.indexOf("f",6) == 6){Letter7="Ta";}
+	else if (Data.indexOf("G",6) == 6 || Data.indexOf("g",6) == 6){Letter7="Bu";}
+	else if (Data.indexOf("H",6) == 6 || Data.indexOf("h",6) == 6){Letter7="Ji";}
+	else if (Data.indexOf("I",6) == 6 || Data.indexOf("i",6) == 6){Letter7="Zo";}
+	else if (Data.indexOf("J",6) == 6 || Data.indexOf("j",6) == 6){Letter7="Ci";}
+	else if (Data.indexOf("K",6) == 6 || Data.indexOf("k",6) == 6){Letter7="Ni";}
+	else if (Data.indexOf("L",6) == 6 || Data.indexOf("l",6) == 6){Letter7="Bi";}
+	else if (Data.indexOf("M",6) == 6 || Data.indexOf("m",6) == 6){Letter7="Va";}
+	else if (Data.indexOf("N",6) == 6 || Data.indexOf("n",6) == 6){Letter7="Ka";}
+	else if (Data.indexOf("O",6) == 6 || Data.indexOf("o",6) == 6){Letter7="Ba";}
+	else if (Data.indexOf("P",6) == 6 || Data.indexOf("P",6) == 6){Letter7="Zi";}
+	else if (Data.indexOf("Q",6) == 6 || Data.indexOf("q",6) == 6){Letter7="Ju";}
+	else if (Data.indexOf("R",6) == 6 || Data.indexOf("r",6) == 6){Letter7="Ve";}
+	else if (Data.indexOf("S",6) == 6 || Data.indexOf("s",6) == 6){Letter7="Me";}
+	else if (Data.indexOf("T",6) == 6 || Data.indexOf("t",6) == 6){Letter7="Su";}
+	else if (Data.indexOf("U",6) == 6 || Data.indexOf("u",6) == 6){Letter7="To";}
+	else if (Data.indexOf("V",6) == 6 || Data.indexOf("v",6) == 6){Letter7="Be";}
+	else if (Data.indexOf("W",6) == 6 || Data.indexOf("w",6) == 6){Letter7="Fa";}
+	else if (Data.indexOf("X",6) == 6 || Data.indexOf("x",6) == 6){Letter7="Fe";}
+	else if (Data.indexOf("Y",6) == 6 || Data.indexOf("y",6) == 6){Letter7="Wu";}
+	else if (Data.indexOf("Z",6) == 6 || Data.indexOf("z",6) == 6){Letter7="Ki";}
+	//Eighth Letter
+	if (Data.indexOf("A") == 7 || Data.indexOf("a") == 7){Letter8="Ro";}
+	else if (Data.indexOf("B",7) == 7 || Data.indexOf("b",7) == 7){Letter8="Ze";}
+	else if (Data.indexOf("C",7) == 7 || Data.indexOf("c",7) == 7){Letter8="Ma";}
+	else if (Data.indexOf("D",7) == 7 || Data.indexOf("d",7) == 7){Letter8="Ku";}
+	else if (Data.indexOf("E",7) == 7 || Data.indexOf("e",7) == 7){Letter8="Vo";}
+	else if (Data.indexOf("F",7) == 7 || Data.indexOf("f",7) == 7){Letter8="Ta";}
+	else if (Data.indexOf("G",7) == 7 || Data.indexOf("g",7) == 7){Letter8="Bu";}
+	else if (Data.indexOf("H",7) == 7 || Data.indexOf("h",7) == 7){Letter8="Ji";}
+	else if (Data.indexOf("I",7) == 7 || Data.indexOf("i",7) == 7){Letter8="Zo";}
+	else if (Data.indexOf("J",7) == 7 || Data.indexOf("j",7) == 7){Letter8="Ci";}
+	else if (Data.indexOf("K",7) == 7 || Data.indexOf("k",7) == 7){Letter8="Ni";}
+	else if (Data.indexOf("L",7) == 7 || Data.indexOf("l",7) == 7){Letter8="Bi";}
+	else if (Data.indexOf("M",7) == 7 || Data.indexOf("m",7) == 7){Letter8="Va";}
+	else if (Data.indexOf("N",7) == 7 || Data.indexOf("n",7) == 7){Letter8="Ka";}
+	else if (Data.indexOf("O",7) == 7 || Data.indexOf("o",7) == 7){Letter8="Ba";}
+	else if (Data.indexOf("P",7) == 7 || Data.indexOf("P",7) == 7){Letter8="Zi";}
+	else if (Data.indexOf("Q",7) == 7 || Data.indexOf("q",7) == 7){Letter8="Ju";}
+	else if (Data.indexOf("R",7) == 7 || Data.indexOf("r",7) == 7){Letter8="Ve";}
+	else if (Data.indexOf("S",7) == 7 || Data.indexOf("s",7) == 7){Letter8="Me";}
+	else if (Data.indexOf("T",7) == 7 || Data.indexOf("t",7) == 7){Letter8="Su";}
+	else if (Data.indexOf("U",7) == 7 || Data.indexOf("u",7) == 7){Letter8="To";}
+	else if (Data.indexOf("V",7) == 7 || Data.indexOf("v",7) == 7){Letter8="Be";}
+	else if (Data.indexOf("W",7) == 7 || Data.indexOf("w",7) == 7){Letter8="Fa";}
+	else if (Data.indexOf("X",7) == 7 || Data.indexOf("x",7) == 7){Letter8="Fe";}
+	else if (Data.indexOf("Y",7) == 7 || Data.indexOf("y",7) == 7){Letter8="Wu";}
+	else if (Data.indexOf("Z",7) == 7 || Data.indexOf("z",7) == 7){Letter8="Ki";}
+	//Ninth Letter
+	if (Data.indexOf("A") == 8 || Data.indexOf("a") == 8){Letter9="Ro";}
+	else if (Data.indexOf("B",8) == 8 || Data.indexOf("b",8) == 8){Letter9="Ze";}
+	else if (Data.indexOf("C",8) == 8 || Data.indexOf("c",8) == 8){Letter9="Ma";}
+	else if (Data.indexOf("D",8) == 8 || Data.indexOf("d",8) == 8){Letter9="Ku";}
+	else if (Data.indexOf("E",8) == 8 || Data.indexOf("e",8) == 8){Letter9="Vo";}
+	else if (Data.indexOf("F",8) == 8 || Data.indexOf("f",8) == 8){Letter9="Ta";}
+	else if (Data.indexOf("G",8) == 8 || Data.indexOf("g",8) == 8){Letter9="Bu";}
+	else if (Data.indexOf("H",8) == 8 || Data.indexOf("h",8) == 8){Letter9="Ji";}
+	else if (Data.indexOf("I",8) == 8 || Data.indexOf("i",8) == 8){Letter9="Zo";}
+	else if (Data.indexOf("J",8) == 8 || Data.indexOf("j",8) == 8){Letter9="Ci";}
+	else if (Data.indexOf("K",8) == 8 || Data.indexOf("k",8) == 8){Letter9="Ni";}
+	else if (Data.indexOf("L",8) == 8 || Data.indexOf("l",8) == 8){Letter9="Bi";}
+	else if (Data.indexOf("M",8) == 8 || Data.indexOf("m",8) == 8){Letter9="Va";}
+	else if (Data.indexOf("N",8) == 8 || Data.indexOf("n",8) == 8){Letter9="Ka";}
+	else if (Data.indexOf("O",8) == 8 || Data.indexOf("o",8) == 8){Letter9="Ba";}
+	else if (Data.indexOf("P",8) == 8 || Data.indexOf("P",8) == 8){Letter9="Zi";}
+	else if (Data.indexOf("Q",8) == 8 || Data.indexOf("q",8) == 8){Letter9="Ju";}
+	else if (Data.indexOf("R",8) == 8 || Data.indexOf("r",8) == 8){Letter9="Ve";}
+	else if (Data.indexOf("S",8) == 8 || Data.indexOf("s",8) == 8){Letter9="Me";}
+	else if (Data.indexOf("T",8) == 8 || Data.indexOf("t",8) == 8){Letter9="Su";}
+	else if (Data.indexOf("U",8) == 8 || Data.indexOf("u",8) == 8){Letter9="To";}
+	else if (Data.indexOf("V",8) == 8 || Data.indexOf("v",8) == 8){Letter9="Be";}
+	else if (Data.indexOf("W",8) == 8 || Data.indexOf("w",8) == 8){Letter9="Fa";}
+	else if (Data.indexOf("X",8) == 8 || Data.indexOf("x",8) == 8){Letter9="Fe";}
+	else if (Data.indexOf("Y",8) == 8 || Data.indexOf("y",8) == 8){Letter9="Wu";}
+	else if (Data.indexOf("Z",8) == 8 || Data.indexOf("z",8) == 8){Letter9="Ki";}
+	//Tenth Letter
+	if (Data.indexOf("A") == 9 || Data.indexOf("a") == 9){Letter10="Ro";}
+	else if (Data.indexOf("B",9) == 9 || Data.indexOf("b",9) == 9){Letter10="Ze";}
+	else if (Data.indexOf("C",9) == 9 || Data.indexOf("c",9) == 9){Letter10="Ma";}
+	else if (Data.indexOf("D",9) == 9 || Data.indexOf("d",9) == 9){Letter10="Ku";}
+	else if (Data.indexOf("E",9) == 9 || Data.indexOf("e",9) == 9){Letter10="Vo";}
+	else if (Data.indexOf("F",9) == 9 || Data.indexOf("f",9) == 9){Letter10="Ta";}
+	else if (Data.indexOf("G",9) == 9 || Data.indexOf("g",9) == 9){Letter10="Bu";}
+	else if (Data.indexOf("H",9) == 9 || Data.indexOf("h",9) == 9){Letter10="Ji";}
+	else if (Data.indexOf("I",9) == 9 || Data.indexOf("i",9) == 9){Letter10="Zo";}
+	else if (Data.indexOf("J",9) == 9 || Data.indexOf("j",9) == 9){Letter10="Ci";}
+	else if (Data.indexOf("K",9) == 9 || Data.indexOf("k",9) == 9){Letter10="Ni";}
+	else if (Data.indexOf("L",9) == 9 || Data.indexOf("l",9) == 9){Letter10="Bi";}
+	else if (Data.indexOf("M",9) == 9 || Data.indexOf("m",9) == 9){Letter10="Va";}
+	else if (Data.indexOf("N",9) == 9 || Data.indexOf("n",9) == 9){Letter10="Ka";}
+	else if (Data.indexOf("O",9) == 9 || Data.indexOf("o",9) == 9){Letter10="Ba";}
+	else if (Data.indexOf("P",9) == 9 || Data.indexOf("P",9) == 9){Letter10="Zi";}
+	else if (Data.indexOf("Q",9) == 9 || Data.indexOf("q",9) == 9){Letter10="Ju";}
+	else if (Data.indexOf("R",9) == 9 || Data.indexOf("r",9) == 9){Letter10="Ve";}
+	else if (Data.indexOf("S",9) == 9 || Data.indexOf("s",9) == 9){Letter10="Me";}
+	else if (Data.indexOf("T",9) == 9 || Data.indexOf("t",9) == 9){Letter10="Su";}
+	else if (Data.indexOf("U",9) == 9 || Data.indexOf("u",9) == 9){Letter10="To";}
+	else if (Data.indexOf("V",9) == 9 || Data.indexOf("v",9) == 9){Letter10="Be";}
+	else if (Data.indexOf("W",9) == 9 || Data.indexOf("w",9) == 9){Letter10="Fa";}
+	else if (Data.indexOf("X",9) == 9 || Data.indexOf("x",9) == 9){Letter10="Fe";}
+	else if (Data.indexOf("Y",9) == 9 || Data.indexOf("y",9) == 9){Letter10="Wu";}
+	else if (Data.indexOf("Z",9) == 9 || Data.indexOf("z",9) == 9){Letter10="Ki";}
+	//Eleventh Letter
+	if (Data.indexOf("A") == 10 || Data.indexOf("a") == 10){Letter11="Ro";}
+	else if (Data.indexOf("B",10) == 10 || Data.indexOf("b",10) == 10){Letter11="Ze";}
+	else if (Data.indexOf("C",10) == 10 || Data.indexOf("c",10) == 10){Letter11="Ma";}
+	else if (Data.indexOf("D",10) == 10 || Data.indexOf("d",10) == 10){Letter11="Ku";}
+	else if (Data.indexOf("E",10) == 10 || Data.indexOf("e",10) == 10){Letter11="Vo";}
+	else if (Data.indexOf("F",10) == 10 || Data.indexOf("f",10) == 10){Letter11="Ta";}
+	else if (Data.indexOf("G",10) == 10 || Data.indexOf("g",10) == 10){Letter11="Bu";}
+	else if (Data.indexOf("H",10) == 10 || Data.indexOf("h",10) == 10){Letter11="Ji";}
+	else if (Data.indexOf("I",10) == 10 || Data.indexOf("i",10) == 10){Letter11="Zo";}
+	else if (Data.indexOf("J",10) == 10 || Data.indexOf("j",10) == 10){Letter11="Ci";}
+	else if (Data.indexOf("K",10) == 10 || Data.indexOf("k",10) == 10){Letter11="Ni";}
+	else if (Data.indexOf("L",10) == 10 || Data.indexOf("l",10) == 10){Letter11="Bi";}
+	else if (Data.indexOf("M",10) == 10 || Data.indexOf("m",10) == 10){Letter11="Va";}
+	else if (Data.indexOf("N",10) == 10 || Data.indexOf("n",10) == 10){Letter11="Ka";}
+	else if (Data.indexOf("O",10) == 10 || Data.indexOf("o",10) == 10){Letter11="Ba";}
+	else if (Data.indexOf("P",10) == 10 || Data.indexOf("P",10) == 10){Letter11="Zi";}
+	else if (Data.indexOf("Q",10) == 10 || Data.indexOf("q",10) == 10){Letter11="Ju";}
+	else if (Data.indexOf("R",10) == 10 || Data.indexOf("r",10) == 10){Letter11="Ve";}
+	else if (Data.indexOf("S",10) == 10 || Data.indexOf("s",10) == 10){Letter11="Me";}
+	else if (Data.indexOf("T",10) == 10 || Data.indexOf("t",10) == 10){Letter11="Su";}
+	else if (Data.indexOf("U",10) == 10 || Data.indexOf("u",10) == 10){Letter11="To";}
+	else if (Data.indexOf("V",10) == 10 || Data.indexOf("v",10) == 10){Letter11="Be";}
+	else if (Data.indexOf("W",10) == 10 || Data.indexOf("w",10) == 10){Letter11="Fa";}
+	else if (Data.indexOf("X",10) == 10 || Data.indexOf("x",10) == 10){Letter11="Fe";}
+	else if (Data.indexOf("Y",10) == 10 || Data.indexOf("y",10) == 10){Letter11="Wu";}
+	else if (Data.indexOf("Z",10) == 10 || Data.indexOf("z",10) == 10){Letter11="Ki";}
+	//Twelth Letter
+	if (Data.indexOf("A") == 11 || Data.indexOf("a") == 11){Letter12="Ro";}
+	else if (Data.indexOf("B",11) == 11 || Data.indexOf("b",11) == 11){Letter12="Ze";}
+	else if (Data.indexOf("C",11) == 11 || Data.indexOf("c",11) == 11){Letter12="Ma";}
+	else if (Data.indexOf("D",11) == 11 || Data.indexOf("d",11) == 11){Letter12="Ku";}
+	else if (Data.indexOf("E",11) == 11 || Data.indexOf("e",11) == 11){Letter12="Vo";}
+	else if (Data.indexOf("F",11) == 11 || Data.indexOf("f",11) == 11){Letter12="Ta";}
+	else if (Data.indexOf("G",11) == 11 || Data.indexOf("g",11) == 11){Letter12="Bu";}
+	else if (Data.indexOf("H",11) == 11 || Data.indexOf("h",11) == 11){Letter12="Ji";}
+	else if (Data.indexOf("I",11) == 11 || Data.indexOf("i",11) == 11){Letter12="Zo";}
+	else if (Data.indexOf("J",11) == 11 || Data.indexOf("j",11) == 11){Letter12="Ci";}
+	else if (Data.indexOf("K",11) == 11 || Data.indexOf("k",11) == 11){Letter12="Ni";}
+	else if (Data.indexOf("L",11) == 11 || Data.indexOf("l",11) == 11){Letter12="Bi";}
+	else if (Data.indexOf("M",11) == 11 || Data.indexOf("m",11) == 11){Letter12="Va";}
+	else if (Data.indexOf("N",11) == 11 || Data.indexOf("n",11) == 11){Letter12="Ka";}
+	else if (Data.indexOf("O",11) == 11 || Data.indexOf("o",11) == 11){Letter12="Ba";}
+	else if (Data.indexOf("P",11) == 11 || Data.indexOf("P",11) == 11){Letter12="Zi";}
+	else if (Data.indexOf("Q",11) == 11 || Data.indexOf("q",11) == 11){Letter12="Ju";}
+	else if (Data.indexOf("R",11) == 11 || Data.indexOf("r",11) == 11){Letter12="Ve";}
+	else if (Data.indexOf("S",11) == 11 || Data.indexOf("s",11) == 11){Letter12="Me";}
+	else if (Data.indexOf("T",11) == 11 || Data.indexOf("t",11) == 11){Letter12="Su";}
+	else if (Data.indexOf("U",11) == 11 || Data.indexOf("u",11) == 11){Letter12="To";}
+	else if (Data.indexOf("V",11) == 11 || Data.indexOf("v",11) == 11){Letter12="Be";}
+	else if (Data.indexOf("W",11) == 11 || Data.indexOf("w",11) == 11){Letter12="Fa";}
+	else if (Data.indexOf("X",11) == 11 || Data.indexOf("x",11) == 11){Letter12="Fe";}
+	else if (Data.indexOf("Y",11) == 11 || Data.indexOf("y",11) == 11){Letter12="Wu";}
+	else if (Data.indexOf("Z",11) == 11 || Data.indexOf("z",11) == 11){Letter12="Ki";}
+	//Thirteenth Letter
+	if (Data.indexOf("A") == 12 || Data.indexOf("a") == 12){Letter13="Ro";}
+	else if (Data.indexOf("B",12) == 12 || Data.indexOf("b",12) == 12){Letter13="Ze";}
+	else if (Data.indexOf("C",12) == 12 || Data.indexOf("c",12) == 12){Letter13="Ma";}
+	else if (Data.indexOf("D",12) == 12 || Data.indexOf("d",12) == 12){Letter13="Ku";}
+	else if (Data.indexOf("E",12) == 12 || Data.indexOf("e",12) == 12){Letter13="Vo";}
+	else if (Data.indexOf("F",12) == 12 || Data.indexOf("f",12) == 12){Letter13="Ta";}
+	else if (Data.indexOf("G",12) == 12 || Data.indexOf("g",12) == 12){Letter13="Bu";}
+	else if (Data.indexOf("H",12) == 12 || Data.indexOf("h",12) == 12){Letter13="Ji";}
+	else if (Data.indexOf("I",12) == 12 || Data.indexOf("i",12) == 12){Letter13="Zo";}
+	else if (Data.indexOf("J",12) == 12 || Data.indexOf("j",12) == 12){Letter13="Ci";}
+	else if (Data.indexOf("K",12) == 12 || Data.indexOf("k",12) == 12){Letter13="Ni";}
+	else if (Data.indexOf("L",12) == 12 || Data.indexOf("l",12) == 12){Letter13="Bi";}
+	else if (Data.indexOf("M",12) == 12 || Data.indexOf("m",12) == 12){Letter13="Va";}
+	else if (Data.indexOf("N",12) == 12 || Data.indexOf("n",12) == 12){Letter13="Ka";}
+	else if (Data.indexOf("O",12) == 12 || Data.indexOf("o",12) == 12){Letter13="Ba";}
+	else if (Data.indexOf("P",12) == 12 || Data.indexOf("P",12) == 12){Letter13="Zi";}
+	else if (Data.indexOf("Q",12) == 12 || Data.indexOf("q",12) == 12){Letter13="Ju";}
+	else if (Data.indexOf("R",12) == 12 || Data.indexOf("r",12) == 12){Letter13="Ve";}
+	else if (Data.indexOf("S",12) == 12 || Data.indexOf("s",12) == 12){Letter13="Me";}
+	else if (Data.indexOf("T",12) == 12 || Data.indexOf("t",12) == 12){Letter13="Su";}
+	else if (Data.indexOf("U",12) == 12 || Data.indexOf("u",12) == 12){Letter13="To";}
+	else if (Data.indexOf("V",12) == 12 || Data.indexOf("v",12) == 12){Letter13="Be";}
+	else if (Data.indexOf("W",12) == 12 || Data.indexOf("w",12) == 12){Letter13="Fa";}
+	else if (Data.indexOf("X",12) == 12 || Data.indexOf("x",12) == 12){Letter13="Fe";}
+	else if (Data.indexOf("Y",12) == 12 || Data.indexOf("y",12) == 12){Letter13="Wu";}
+	else if (Data.indexOf("Z",12) == 12 || Data.indexOf("z",12) == 12){Letter13="Ki";}
+	//Fourteenth Letter
+	if (Data.indexOf("A") == 13 || Data.indexOf("a") == 13){Letter14="Ro";}
+	else if (Data.indexOf("B",13) == 13 || Data.indexOf("b",13) == 13){Letter14="Ze";}
+	else if (Data.indexOf("C",13) == 13 || Data.indexOf("c",13) == 13){Letter14="Ma";}
+	else if (Data.indexOf("D",13) == 13 || Data.indexOf("d",13) == 13){Letter14="Ku";}
+	else if (Data.indexOf("E",13) == 13 || Data.indexOf("e",13) == 13){Letter14="Vo";}
+	else if (Data.indexOf("F",13) == 13 || Data.indexOf("f",13) == 13){Letter14="Ta";}
+	else if (Data.indexOf("G",13) == 13 || Data.indexOf("g",13) == 13){Letter14="Bu";}
+	else if (Data.indexOf("H",13) == 13 || Data.indexOf("h",13) == 13){Letter14="Ji";}
+	else if (Data.indexOf("I",13) == 13 || Data.indexOf("i",13) == 13){Letter14="Zo";}
+	else if (Data.indexOf("J",13) == 13 || Data.indexOf("j",13) == 13){Letter14="Ci";}
+	else if (Data.indexOf("K",13) == 13 || Data.indexOf("k",13) == 13){Letter14="Ni";}
+	else if (Data.indexOf("L",13) == 13 || Data.indexOf("l",13) == 13){Letter14="Bi";}
+	else if (Data.indexOf("M",13) == 13 || Data.indexOf("m",13) == 13){Letter14="Va";}
+	else if (Data.indexOf("N",13) == 13 || Data.indexOf("n",13) == 13){Letter14="Ka";}
+	else if (Data.indexOf("O",13) == 13 || Data.indexOf("o",13) == 13){Letter14="Ba";}
+	else if (Data.indexOf("P",13) == 13 || Data.indexOf("P",13) == 13){Letter14="Zi";}
+	else if (Data.indexOf("Q",13) == 13 || Data.indexOf("q",13) == 13){Letter14="Ju";}
+	else if (Data.indexOf("R",13) == 13 || Data.indexOf("r",13) == 13){Letter14="Ve";}
+	else if (Data.indexOf("S",13) == 13 || Data.indexOf("s",13) == 13){Letter14="Me";}
+	else if (Data.indexOf("T",13) == 13 || Data.indexOf("t",13) == 13){Letter14="Su";}
+	else if (Data.indexOf("U",13) == 13 || Data.indexOf("u",13) == 13){Letter14="To";}
+	else if (Data.indexOf("V",13) == 13 || Data.indexOf("v",13) == 13){Letter14="Be";}
+	else if (Data.indexOf("W",13) == 13 || Data.indexOf("w",13) == 13){Letter14="Fa";}
+	else if (Data.indexOf("X",13) == 13 || Data.indexOf("x",13) == 13){Letter14="Fe";}
+	else if (Data.indexOf("Y",13) == 13 || Data.indexOf("y",13) == 13){Letter14="Wu";}
+	else if (Data.indexOf("Z",13) == 13 || Data.indexOf("z",13) == 13){Letter14="Ki";}
+	//Fifteenth Letter
+	if (Data.indexOf("A") == 14 || Data.indexOf("a") == 14){Letter15="Ro";}
+	else if (Data.indexOf("B",14) == 14 || Data.indexOf("b",14) == 14){Letter15="Ze";}
+	else if (Data.indexOf("C",14) == 14 || Data.indexOf("c",14) == 14){Letter15="Ma";}
+	else if (Data.indexOf("D",14) == 14 || Data.indexOf("d",14) == 14){Letter15="Ku";}
+	else if (Data.indexOf("E",14) == 14 || Data.indexOf("e",14) == 14){Letter15="Vo";}
+	else if (Data.indexOf("F",14) == 14 || Data.indexOf("f",14) == 14){Letter15="Ta";}
+	else if (Data.indexOf("G",14) == 14 || Data.indexOf("g",14) == 14){Letter15="Bu";}
+	else if (Data.indexOf("H",14) == 14 || Data.indexOf("h",14) == 14){Letter15="Ji";}
+	else if (Data.indexOf("I",14) == 14 || Data.indexOf("i",14) == 14){Letter15="Zo";}
+	else if (Data.indexOf("J",14) == 14 || Data.indexOf("j",14) == 14){Letter15="Ci";}
+	else if (Data.indexOf("K",14) == 14 || Data.indexOf("k",14) == 14){Letter15="Ni";}
+	else if (Data.indexOf("L",14) == 14 || Data.indexOf("l",14) == 14){Letter15="Bi";}
+	else if (Data.indexOf("M",14) == 14 || Data.indexOf("m",14) == 14){Letter15="Va";}
+	else if (Data.indexOf("N",14) == 14 || Data.indexOf("n",14) == 14){Letter15="Ka";}
+	else if (Data.indexOf("O",14) == 14 || Data.indexOf("o",14) == 14){Letter15="Ba";}
+	else if (Data.indexOf("P",14) == 14 || Data.indexOf("P",14) == 14){Letter15="Zi";}
+	else if (Data.indexOf("Q",14) == 14 || Data.indexOf("q",14) == 14){Letter15="Ju";}
+	else if (Data.indexOf("R",14) == 14 || Data.indexOf("r",14) == 14){Letter15="Ve";}
+	else if (Data.indexOf("S",14) == 14 || Data.indexOf("s",14) == 14){Letter15="Me";}
+	else if (Data.indexOf("T",14) == 14 || Data.indexOf("t",14) == 14){Letter15="Su";}
+	else if (Data.indexOf("U",14) == 14 || Data.indexOf("u",14) == 14){Letter15="To";}
+	else if (Data.indexOf("V",14) == 14 || Data.indexOf("v",14) == 14){Letter15="Be";}
+	else if (Data.indexOf("W",14) == 14 || Data.indexOf("w",14) == 14){Letter15="Fa";}
+	else if (Data.indexOf("X",14) == 14 || Data.indexOf("x",14) == 14){Letter15="Fe";}
+	else if (Data.indexOf("Y",14) == 14 || Data.indexOf("y",14) == 14){Letter15="Wu";}
+	else if (Data.indexOf("Z",14) == 14 || Data.indexOf("z",14) == 14){Letter15="Ki";}
+	//Sixteenth Letter
+	if (Data.indexOf("A") == 15 || Data.indexOf("a") == 15){Letter16="Ro";}
+	else if (Data.indexOf("B",15) == 15 || Data.indexOf("b",15) == 15){Letter16="Ze";}
+	else if (Data.indexOf("C",15) == 15 || Data.indexOf("c",15) == 15){Letter16="Ma";}
+	else if (Data.indexOf("D",15) == 15 || Data.indexOf("d",15) == 15){Letter16="Ku";}
+	else if (Data.indexOf("E",15) == 15 || Data.indexOf("e",15) == 15){Letter16="Vo";}
+	else if (Data.indexOf("F",15) == 15 || Data.indexOf("f",15) == 15){Letter16="Ta";}
+	else if (Data.indexOf("G",15) == 15 || Data.indexOf("g",15) == 15){Letter16="Bu";}
+	else if (Data.indexOf("H",15) == 15 || Data.indexOf("h",15) == 15){Letter16="Ji";}
+	else if (Data.indexOf("I",15) == 15 || Data.indexOf("i",15) == 15){Letter16="Zo";}
+	else if (Data.indexOf("J",15) == 15 || Data.indexOf("j",15) == 15){Letter16="Ci";}
+	else if (Data.indexOf("K",15) == 15 || Data.indexOf("k",15) == 15){Letter16="Ni";}
+	else if (Data.indexOf("L",15) == 15 || Data.indexOf("l",15) == 15){Letter16="Bi";}
+	else if (Data.indexOf("M",15) == 15 || Data.indexOf("m",15) == 15){Letter16="Va";}
+	else if (Data.indexOf("N",15) == 15 || Data.indexOf("n",15) == 15){Letter16="Ka";}
+	else if (Data.indexOf("O",15) == 15 || Data.indexOf("o",15) == 15){Letter16="Ba";}
+	else if (Data.indexOf("P",15) == 15 || Data.indexOf("P",15) == 15){Letter16="Zi";}
+	else if (Data.indexOf("Q",15) == 15 || Data.indexOf("q",15) == 15){Letter16="Ju";}
+	else if (Data.indexOf("R",15) == 15 || Data.indexOf("r",15) == 15){Letter16="Ve";}
+	else if (Data.indexOf("S",15) == 15 || Data.indexOf("s",15) == 15){Letter16="Me";}
+	else if (Data.indexOf("T",15) == 15 || Data.indexOf("t",15) == 15){Letter16="Su";}
+	else if (Data.indexOf("U",15) == 15 || Data.indexOf("u",15) == 15){Letter16="To";}
+	else if (Data.indexOf("V",15) == 15 || Data.indexOf("v",15) == 15){Letter16="Be";}
+	else if (Data.indexOf("W",15) == 15 || Data.indexOf("w",15) == 15){Letter16="Fa";}
+	else if (Data.indexOf("X",15) == 15 || Data.indexOf("x",15) == 15){Letter16="Fe";}
+	else if (Data.indexOf("Y",15) == 15 || Data.indexOf("y",15) == 15){Letter16="Wu";}
+	else if (Data.indexOf("Z",15) == 15 || Data.indexOf("z",15) == 15){Letter16="Ki";}
+
+	document.getElementById("translated").innerHTML=Letter1+Letter2+Letter3+Letter4+Letter5+Letter6+Letter7+Letter8+Letter9+Letter10+Letter11+Letter12+Letter13+Letter14+Letter15+Letter16;
+	}
+	function Clear()
+	{
+	document.getElementById("translated").innerHTML="";
+	Letter1="  "
+	Letter2="  "
+	Letter3="  "
+	Letter4="  "
+	Letter5="  "
+	Letter6="  "
+	Letter7="  "
+	Letter8="  "
+	Letter9="  "
+	Letter10="  "
+	Letter11="  "
+	Letter12="  "
+	Letter13="  "
+	Letter14="  "
+	Letter15="  "
+	Letter16="  "
+	}
+</script>
+</head>
+<body>
+<div style="color:lime" id="formcolor">
+<FORM NAME="myform" ACTION="" METHOD="GET" id="TranslateForm">Type a word for its translation. <BR>
+<INPUT TYPE="text" NAME="data" VALUE=""><Br>
+<input type="button" value="Translate!!" onClick="Translate(this.form);" style="background-color:Lime;"frameborder="0">
+<input type="button" value="Clear" onClick="Clear()" style="background-color:Lime;" frameborder="0">
+<p id="translated"></p>
+</div>
+</form>
+<script>
+today = new Date();
+day = today.getDay();
+if (day == 0){document.getElementById("link").href="CSS/main/CSS-0003.1.css"; document.getElementById("formcolor").style.color="white"}
+if (day == 1){document.getElementById("link").href="CSS/main/CSS-0003.2.css";document.getElementById("formcolor").style.color="yellow"}
+if (day == 2){document.getElementById("link").href="CSS/main/CSS-0003.3.css";document.getElementById("formcolor").style.color="yellow"}
+if (day == 3){document.getElementById("link").href="CSS/main/CSS-0003.4.css";document.getElementById("formcolor").style.color="blue"}
+if (day == 4){document.getElementById("link").href="CSS/main/CSS-0003.5.css";document.getElementById("formcolor").style.color="white"}
+if (day == 5){document.getElementById("link").href="CSS/main/CSS-0003.6.css";document.getElementById("formcolor").style.color="blue"}
+if (day == 6){document.getElementById("link").href="CSS/main/CSS-0003.css";document.getElementById("formcolor").style.color="goldenrod"}
+</script>
+</body>
+</html>

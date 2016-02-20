@@ -1,0 +1,7 @@
+Goal Hook:    Up:216    Down:63
+Trap Door:  Open:128    Closed:1
+Arm Turnover:  zone of swap : -1672/ -1336 (where we want to switch)
+
+Small Goal:  Rot -2195
+Medium Goal: Rot - 1675
+High Goal:   Rot - 1162

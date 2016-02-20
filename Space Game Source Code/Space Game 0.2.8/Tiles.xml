@@ -1,0 +1,86 @@
+<Celestial_Objects>
+  <Object>
+    <Name>Space</Name>
+	<Type>Space</Type>
+    <CreateName>None</CreateName>
+	<SpawnPercent>70</SpawnPercent>
+	<SpawnMax>-1</SpawnMax>
+    <Size>1</Size>
+	<MultiplyColor>False</MultiplyColor>
+	<FgColor></FgColor>
+    <BgColor>#ffffff</BgColor>
+    <MainArt>Stars.png , Stars2.png</MainArt>
+	<OverlayArt>OverlaySize1Base.png</OverlayArt>
+  </Object>
+  
+  <Object>
+    <Name>Planet</Name>
+	<Type>Planet</Type>
+    <CreateName>Planet</CreateName>
+	<SpawnPercent>5</SpawnPercent>
+	<SpawnMax>12</SpawnMax>
+    <Size>1</Size>
+	<MultiplyColor>True</MultiplyColor>
+	<FgColor>[0xff555555,0xff880000,0xffFF0000,0xffFF8800,0xFFFF00,0xff88FF00,0xff00FF00,0xff008800,0xff555555]</FgColor>
+	<BgColor>[0xff550055,0xffAA00FF,0xff0000FF,0xff000066]</BgColor>
+    <MainArt>Planet_Main_2.gif , Planet_Main.png</MainArt>
+	<OverlayArt>Planet_Overlay.png</OverlayArt>
+  </Object>
+  
+  <Object>
+    <Name>Asteroid Field</Name>
+	<Type>Asteroid</Type>
+    <CreateName>None</CreateName>
+	<SpawnPercent>20</SpawnPercent>
+	<SpawnMax>16</SpawnMax>
+    <Size>1</Size>
+	<MultiplyColor>False</MultiplyColor>
+	<FgColor></FgColor>
+    <BgColor>#554400</BgColor>
+    <MainArt>AsteroidField.png</MainArt>
+	<OverlayArt>OverlaySize1Base.png</OverlayArt>
+  </Object>
+  
+  <Object>
+    <Name>Neutron Star</Name>
+	<Type>Star</Type>
+    <CreateName>Star</CreateName>
+	<SpawnPercent>2</SpawnPercent>
+	<SpawnMax>1</SpawnMax>
+    <Size>1</Size>
+	<MultiplyColor>False</MultiplyColor>
+	<FgColor></FgColor>
+    <BgColor>#EEEEFF</BgColor>
+    <MainArt>SmaStar.png</MainArt>
+	<OverlayArt>OverlaySize1Base.png</OverlayArt>
+  </Object> 
+ 
+  <Object>
+    <Name>Yellow Star</Name>
+	<Type>Star</Type>
+    <CreateName>Star</CreateName>
+	<SpawnPercent>2</SpawnPercent>
+	<SpawnMax>2</SpawnMax>
+    <Size>2</Size>
+	<MultiplyColor>False</MultiplyColor>
+	<FgColor></FgColor>
+    <BgColor>#FFFF00</BgColor>
+    <MainArt>MedStar.png</MainArt>
+	<OverlayArt>OverlaySize2Base.png</OverlayArt>
+  </Object>
+  
+  <Object>
+    <Name>Red Giant</Name>
+	<Type>Star</Type>
+    <CreateName>Star</CreateName>
+	<SpawnPercent>1</SpawnPercent> 
+	<SpawnMax>1</SpawnMax>
+    <Size>3</Size>
+	<MultiplyColor>False</MultiplyColor>
+	<FgColor></FgColor>
+    <BgColor>#FF0000</BgColor>
+    <MainArt>LarStar.png</MainArt>
+	<OverlayArt>OverlaySize3Base.png</OverlayArt>
+  </Object>
+  
+</Celestial_Objects>

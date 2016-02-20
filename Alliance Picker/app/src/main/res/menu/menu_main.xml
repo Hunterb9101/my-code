@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/action_settings" android:title="Customize"
+        android:onClick="goToSettings"
+        android:orderInCategory="101" app:showAsAction="never" />
+    <item android:id="@+id/addTeam"
+        android:icon="@drawable/results_add"
+        android:title="Add Team"
+        app:showAsAction="ifRoom"  />
+    <item android:id="@+id/delete_all"
+        android:icon="@drawable/results_deleteall"
+        android:title="Delete All"
+        app:showAsAction="ifRoom"  />
+    <item android:id="@+id/menu_settings"
+        android:icon="@drawable/results_cog"
+        android:title="Set Preferences"
+        app:showAsAction="ifRoom"  />
+</menu>

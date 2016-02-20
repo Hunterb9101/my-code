@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Alliance Picker</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_question">Alliance Picker Create Team</string>
+    <string name="title_activity_info">Team Statistics</string>
+
+    <string name="spinner_prompt">Pick team to compare to</string>
+    <string name="title_activity_customize">Customize Your Team Scouting App</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="This is a template"
+    android:layout_weight="1"
+    android:textColor="#000000"
+    android:layout_gravity="left"
+    android:layout_columnSpan="3"
+    style="@style/my_style"/>

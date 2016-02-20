@@ -1,0 +1,7 @@
+sVersion=0.2.8
+sIconPath=images/Icon.ico
+sImagePath=images/
+iBoardSize=40*40
+iTileSize=70
+iPadding=70*70*70*280
+bFullscreenOnStart=True
